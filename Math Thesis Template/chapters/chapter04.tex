@@ -10,3 +10,36 @@ In times past there lived a king and queen, who said to each other every day of 
 In conclusion the original nine dataset created in this way can be used for graph property calculations and firstly we study the English language.
 
 \section{English}
+By processing the first two paragraphs of the story "Sleeping Beauty" to achieve a usuable dataset. The dataset is then converted into a directed word graph as shown by figure \ref{fig:engword}. Additionally in replacement of having each vertex labelled by the corresponding word, each vertex will be labelled with an integer and the relative integer for each word will be shown on the table of values for the graph. The table will be shown later. So we achieve the initial directed word graph both in orignal form and alterneated form shown in figure \ref{fig:engnum}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\includegraphics[scale=0.2]{englishwordgraph.png}
+	\caption{Graph generated based on an extract of the story "Sleeping Beauty" with each unique word labelling each vertex.}
+	\label{fig:engword}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\includegraphics[scale=0.2]{englishnumbergraph.png}
+	\caption{Same graph as the word graph for the English version of "Sleeping Beauty" but with numerical labelling rather than the corresponding words. The numbers are labelled in order of the unique words in alphabetical order which is also shown in the table later on.}
+	\label{fig:engnum}
+\end{subfigure}
+\end{figure}
+
+As done in the Early Experimentations of the karate club dataset, we calculate the values of the various graph properties explained in Chapter 2. These are graph properties such as local clustering coefficient, betweenness centrality, closeness centrality, trophic levels and page rank. Values are organised into their correpsonding columns and presented as a table as shown in Table \ref{table:english} which includes the number of appearanes the word has denoted as count and the relative vertex number in the numbered english graph.
+
+\begin{table}[H]
+	\centering
+	\includegraphics[scale=1]{englishtabletop10.png}
+	\caption{The initial graph based on the karate club dataset pre-existing within the library that was generated through the python program. Contains 34 clubs and their connections to one another with no important meaning with the positions of the vertices.}
+	\label{table:english}
+\end{table}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.20]{karate.png}
+	\caption{The initial graph based on the karate club dataset pre-existing within the library that was generated through the python program. Contains 34 clubs and their connections to one another with no important meaning with the positions of the vertices.}
+	\label{fig:karate}
+\end{figure}
