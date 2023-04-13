@@ -17,9 +17,9 @@ In times past there lived a king and queen, who said to each other every day of 
 In conclusion the original nine dataset created in this way can be used for graph property calculations. Next section will study English version of the story which is part of the I
 
 \section{Indo-European Language Family}
-
+Initial the languages of the Indo-European family are studied and a few of them are described in detail later including English and German. Throughout the analysis, words are referred to as vertices, the corpus of the text is the two paragraph extract of "Sleeping Beauty in the relative language and vice versa. Each word in a graph has edges which are directerd to the next word relative to the extract. 
 \subsection{English}
-English words can be organised into eight different parts of speech; Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Determiners and Conjunctions. Linguistic researchers focus on the use of these categories in different situations such as through speaking or through magazines\cite{Pkhaisaeng2017study}. We will study the appearances of these categories in an extract of "Sleeping Beauty". To achieve this, the first two paragraphs of the story is received as an input in my program to achieve a usable dataset. The dataset is then converted into a directed word graph as shown by figure \ref{fig:engword}. Additionally in replacement of having each vertex labelled by the corresponding word, each vertex will be labelled with an integer and the relative integer for each word will be shown on the table of values for the graph. The table will be shown later. So we achieve the initial directed word graph both in original form and alternated form shown in figure \ref{fig:engnum}.
+English words can be organised into eight different parts of speech; Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Determiners and Conjunctions. Linguistic researchers focus on the use of these categories in different situations such as through speaking or through magazines\cite{khaisaeng2017study}. We will study the appearances of these categories in an extract of "Sleeping Beauty". To achieve this, the first two paragraphs of the story is received as an input in my program to achieve a usable dataset. The dataset is then converted into a directed word graph as shown by figure \ref{fig:engword}. Additionally in replacement of having each vertex labelled by the corresponding word, each vertex will be labelled with an integer and the relative integer for each word will be shown on the table of values for the graph. The table will be shown later. So we achieve the initial directed word graph both in original form and alternated form shown in figure \ref{fig:engnum}.
 
 \begin{figure}[H]
 \centering
@@ -36,7 +36,7 @@ English words can be organised into eight different parts of speech; Nouns, Pron
 \end{subfigure}
 \end{figure}
 
-As done in the Early Experimentations of the karate club dataset, we calculate the values of the various graph properties explained in Chapter 2. These are graph properties such as local clustering coefficient, betweenness centrality, closeness centrality, trophic levels and page rank. Values are organised into their corresponding columns and presented as a table with the first ten entries shown in Table \ref{table:english}  below. Table also includes the number of appearances the word has denoted as count and the relative vertex number in the numbered English graph. The entire table can be seen in Appendix \ref{app:engtable}.
+As done in the Early Experimentations of the karate club dataset, we calculate the values of the various graph properties explained in Chapter 2. These are graph properties such as local clustering coefficient, betweenness centrality, closeness centrality, trophic levels and page rank. Values are organised into their corresponding columns and presented as a table with the ten most frequent words shown in Table \ref{table:english} below. Table also includes the number of appearances the word has denoted as count and the relative vertex number in the numbered English graph. The entire table can be seen in Appendix \ref{app:engtable}.
 
 \begin{table}[H]
 	\centering
@@ -47,7 +47,7 @@ As done in the Early Experimentations of the karate club dataset, we calculate t
 
 We begin by analysing words with the most recurrences which are, in the order of most frequent to least, "and", "the", "a", "to", "had", "he", "of", "that", "be" and "but". Note that nouns, adverbs and adjectives do not appear in the most recurring words. These are the words that are deemed more vital in the creation of structure within a sentence. Any sentence in this story will have a high chance of containing at least one of these words. Since this is a small dataset, we can compare these words to a larger dataset for word reoccurrences as the Zipf curve for langauge are similar as discussed in a previous section. The corpus to compare to the British National Corpus (BNC)\cite{bnc2007british} which is a 100 million word collections that includes both written and spoken language. The benefits to this corpus is that it contains older English so may provide clearer correlations to the story of "Sleeping Beauty" as the Brothers Grimm version began in the late 18th century. Hence based on this corpus, the top ten frequent words\cite{leech2014word} in order of frequency are; "the", "of", "and", "a", "in", "to", "it", "is", "to" and "was". Comparing the most frequent words in both corpuses, we repetitions of words such as "the", "to" etc. Such similarities reinforce the fact that the English language has a very structured form that requires the use of these such words as the results are clear with a much smaller corpus compared to the the BNC.
 
-Now onto the analysis of Trophic levels and coherence 
+Now onto the analysis of Trophic levels and coherence. When applying trophic level calculations on directed word graphs, the levels represent the position of the word in a sentence similarly shown in the analysis of network data in empirically-derived directed networks\cite{johnson2017looplessness}. For the "Sleeping Beauty" English word graph, the lower trophic levels tends to be sentence starters and the higher levels are the ends of sentences. This is supported by the data because the top five words with largest trophic levels values (ranging from 10.00-6.01) are all sentence enders. Along with the bottom five being words (trophic values ranging from 0.49-0.00) nearer the start of sentences such as "there" and "times" in relation to the corpus. However trophic incoherence is calculated to be 0.969 which means that the levels in the graph can not be distinguished and are not clear. Since the $\text{trophic coherence} = 1 - \text{trophic incoherence} = 0.031$ which is due to the fact of the vast difference of sentence lengths in the corpus. Which varies from the shortest sentence of five words and the longest of forty seven words. Consequently the for the extract used, it may not provide a clear hierarchical layout but still provides a good layout of sentence flow from the lowest level to the highest level. Demonstrated by further graphs with the trophic levels as the y-axis ranging from 0 at the top to 10 at the bottom to provide a normal cascade of words. Includes other graphical properties starting with betweenness and closeness centrality (Figures \ref{fig:engbc} and \ref{fig:engcc}) shown next.
 
 \begin{figure}[H]
 \centering
@@ -66,7 +66,11 @@ Now onto the analysis of Trophic levels and coherence
 \end{subfigure}
 \end{figure}
 
-Betweenness and closeness
+As visually demonstrated on Figures \ref{fig:engbc} and \ref{fig:engcc}, the centrality values for each word is plotted against their trophic levels. Both have been normalised to a range of 0-10 with Figure \ref{fig:engbc} showing the betweenness centrality on the x-axis and Figure \ref{fig:engcc} showing the closeness centrality. Key vertices identified in relation to their betweenness values are vertex 3, 0 and 75 which are the words "and", "a" and "the" respectively. These are conjunctions and determiners of the English langauge and they have the largest frequency of appearance in the corpus relating to the word counts discussed before. So, there is a strong link between the betweenness centrality of vertices to the word counts in the text. Furthermore, these words are common in forming correct structure of an English sentence meaning that high betweenness associates the words as key bridges within a sentence. 
+
+When considering closeness centrality, the graph shows that almost all vertices have a larger closeness value in comparison to their betweenness. This is because the closeness analyses the importance of the words as within their clusters rather than the graph as a whole. So words with high closeness are key connectives in their relative clusters, in other words the sentences they are part of. However vertex 34 (the word "great") is an outlier and by further analysis, vertex 34 is the only connect between vertex 0 and 25. Vertex 25 having the highest trophic level and vertex 0 has a low trophic level and a higher degree. Consequently, the closeness value for 34 is much higher due to the fact that it is the only predecessor of vertex 34 which in itself only has one predecessor. Thus meaning that vertex 34 is the only local bridge in it's sentence giving it an extreme closeness.
+
+In conclusion, based on the story corpus, betweenness finds the words most commonly used as connectors in sentences given the whole extract and closeness finds the words as connections within a close range of one another.
 
 \begin{figure}[H]
 \centering
@@ -85,6 +89,79 @@ Betweenness and closeness
 \end{subfigure}
 \end{figure}
 
-Clustering and Page rank
+Finally Local Clustering and Page rank of the vertices in the graph are presented similarly as before with it's local clustering in Figure \ref{fig:englc} and page rank as Figure \ref{fig:engpr}. Immediately, the local clustering graph shows very few vertices who has a high local clustering, the main ones being vertices 87 and 90 (words "water" and "when" respectively). However, these do no give a clear relation other than the words connected to and from these vertices have a high degree or importance in the graph. These are words such as "and" and "a". On the other hand this is only for the English version of the story so other languages may lead to different results. The page rank of each vertex shows the importance of each word beyond their direct contact. Essentially it has elements of both closeness and betweenness centrality which the graph reinforces.
+
+In conclusion, when analysing the English language, trophic levels have provided a naturally flow of data presentation from top to bottom in the various graphs generated. Some sections are of the graph are also grammatically correct. Betweenness Centrality and Page rank both identifies the words of most importance with respects to the words that connect them. Closeness centrality also identifies words of key importance but at a local level. As this is a smaller corpus, these words are similar. Finally the Local Clustering does not provide sufficient benefit when visualising the dataset in the English langauge. Therefore the results generated based on the English version can be expanded to represent the English language and can even be used to predict and analyse unknown texts or missing words with a given text by representing the missing words as vertices. The position of the vertices will determine it's importance and use within a sentence. This is of course for the English language or language with similar structure.
+
+Now we move onto the analyse of a different translation of the corpus, German.
+
+\subsection{German}
+
+Word graph
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\includegraphics[scale=0.2]{englishwordgraph.png}
+	\caption{Graph generated based on an extract of the story "Sleeping Beauty" with each unique word labelling each vertex.}
+	\label{fig:engword}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\includegraphics[scale=0.2]{englishnumbergraph.png}
+	\caption{Same graph as the word graph for the English version of "Sleeping Beauty" but with numerical labelling rather than the corresponding words. The numbers are labelled in order of the unique words in alphabetical order which is also shown in the table later on.}
+	\label{fig:engnum}
+\end{subfigure}
+\end{figure}
+
+Table
+\begin{table}[H]
+	\centering
+	\includegraphics[scale=1]{englishtabletop10.png}
+	\caption{First ten entries of the dataset generated for the english version of "Sleeping Beauty" in a table format. }
+	\label{table:english}
+\end{table}
+
+Count and Trophic Coherence
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{englishbetweenness.png}
+	\caption{}
+	\label{fig:engbc}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{englishcloseness.png}
+	\caption{}
+	\label{fig:engcc}
+\end{subfigure}
+\end{figure}
+
+Betweenness and Closeness
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{englishbetweenness.png}
+	\caption{}
+	\label{fig:engbc}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{englishcloseness.png}
+	\caption{}
+	\label{fig:engcc}
+\end{subfigure}
+\end{figure}
+
+Local Clustering and Page Rank
 
 Conclusion
+
+\section{Sino-Tibetan}
+\section{Japonic}
