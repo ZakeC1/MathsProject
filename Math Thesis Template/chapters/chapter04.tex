@@ -116,13 +116,14 @@ Expectations of the graph properties for the German language is that there would
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
-	\includegraphics[scale=0.2]{germanwordgraph.png}
+	\includegraphics[scale=0.3]{germanwordgraph.png}
 	\caption{German word graph generated based on the German translation of the corpus.}
 	\label{fig:gerword}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\textwidth}
-	\includegraphics[scale=0.2]{germanwordgraphnumbered.png}
+	\hspace{-2cm} 
+	\includegraphics[scale=0.3]{germanwordgraphnumbered.png}
 	\caption{Numbered version of the word graph to provide a clearer graph. This is called the German numbered graph.}
 	\label{fig:gernum}
 \end{subfigure}
@@ -222,37 +223,37 @@ With previous languages having a largest frequency of nine, with Japanese there 
 \centering
 \begin{subtable}{.45\textwidth}
 	\includegraphics[scale=0.9]{japanesetabletop10.png}
-	\caption{Top 10 words with the highest frequency in the German translation of the corpus. Shown in table format with other graphical properties. }
+	\caption{Top 10 words with the highest frequency in the Japanese translation of the corpus. Shown in table format with other graphical properties. }
 	\label{table:japanesetop}
 \end{subtable}
 \hfill
 \begin{subtable}{.45\textwidth}
 	\hspace{1.5cm} 
 	\includegraphics[scale=1]{jptabletc.png}
-	\caption{Top 10 works with highest trophic levels in the German translation dataset.}
+	\caption{Top 10 works with highest trophic levels in the Japanese translation dataset.}
 	\label{table:japanesentoptc}
 \end{subtable}
-\caption{Partial extracts of the table data for graphical properties of the German Story Corpus.}
+\caption{Partial extracts of the table data for graphical properties of the Japanese Story Corpus.}
 \end{table}
 
-Trophic levels cannot be applied to this dataset like with previous languages. This is due to the graph having bidirectional edges such as the edge between vertex 25 and 5 which is part of the sentence about having only 12 plates. Also vertex 0 contains a self loop which and is part of the word "everyday". So there is not a clear hierarchical structure to be inferred to. The largest trophic level is vertex 56 (refers to female) which appears in middle of sentences with the Japanese story corpus. Currently the trophic levels cannot be calculated accurately but can be if the dataset is split into specific group of words depending on it's meaning rather than character by character. For example vertex 59 and 46 means "child" together but is split in the dataset as the program doesn't recognise characters together as a singular word. However this either requires the full understanding of the Japanese language or heavy cross-referencing and checking. 
+Trophic levels cannot be applied to this dataset like with previous languages. This is due to the graph having bidirectional edges such as the edge between vertex 25 and 5 which is part of the sentence about having only 12 plates. Also vertex 0 contains a self loop which and is part of the word "everyday", the back to back word that creates a different meaning is known as \emph{reduplication}. So there is not a clear hierarchical structure to be inferred to. The largest trophic level is vertex 56 (refers to female) which appears in middle of sentences with the Japanese story corpus. Currently the trophic levels cannot be calculated accurately but can be if the dataset is split into specific group of words depending on it's meaning rather than character by character. For example vertex 59 and 46 means "child" together but is split in the dataset as the program doesn't recognise characters together as a singular word. However this either requires the full understanding of the Japanese language or heavy cross-referencing and checking. 
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
 	\hspace{-1cm} 
 	\includegraphics[scale=0.2]{japanesebetweenness.png}
-	\caption{Positions of the German numbered graph but with trophic levels and betweenness on the y-axis and x-axis respectively.}
+	\caption{Positions of the Japanese numbered graph but with trophic levels and betweenness on the y-axis and x-axis respectively.}
 	\label{fig:jpbc}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\textwidth}
 	\hspace{-1cm} 
 	\includegraphics[scale=0.2]{japanesecloseness.png}
-	\caption{Similar to the betweenness German graph but with closeness centrality values instead. }
+	\caption{Similar to the betweenness Japanese graph but with closeness centrality values instead. }
 	\label{fig:jpcc}
 \end{subfigure}
-\caption{Betweenness and closeness centrality values displayed on the x-axis based on the German numbered word graph.}
+\caption{Betweenness and closeness centrality values displayed on the x-axis based on the Japanese numbered word graph.}
 \label{fig:jpcentrality}
 \end{figure}
 
@@ -288,8 +289,82 @@ Page rank derives the vertices who have an influence to other vertices nearby bu
 In conclusion the way the Japanese story corpus is split into the database (character by character), only general correction can be determined based upon the graphs and their properties. Stronger links as to what exact words have importance cannot be obtained here without the full understanding of the language. On the other hand, we see that in general the graphs are different to the ones based on the Indo-European languages which demonstrates their differences. To see this further we analyse another language and it's language family.
 
 \section{Sino-Tibetan}
-This is the final language family we analyse. 
-
+Sino-Tibetan is the final language family we analyse which contains over 400 languages. The two groups of languages that are successors of this family are Tibeto-Burman language group and Chinese language group. Rather than looking at multiple, we focus on Chinese so translate the story corpus into Chinese then proceed as before. Note that Mandarin Chinese is the 2nd most spoken language after English.
 
 \subsection{Chinese}
+The main branches of Chinese are Mandarin or Cantonese with mandarin considered the standard and is the official language of China. Mandarin is also the language in which the corpus was translated into but will refer to this as Chinese. Chinese has a SVO (subject-verb-object) sentence structure like with English. It is made up of syllables\cite{ross2017modern} which come with three parts, an initial consonant, the tone, and a final. These three determine what syllable the word is and can be written in Pinyin, which is the standard system for romanised spelling. A simple word like "hello" has Pinyin as "nǐ hǎo" where n and h are initials, i and ao are finals and the accents on the i and a are the tone for the syllables. The tone matches the pitch of the syllable and leads to different meanings for the each word. Although each syllable in Mandarin do have meanings, they are usually combined so that words can be formed. E.g. In Pinyin, "dì" means earth but "dì tú" means map.
+
+Similarly to Japanese, Chinese has very few inflections and use other particles which accompany the syllable to express verbal aspect. Another similarity is the use of reduplication where a syllable is repeated to give a different meaning. Parts of speech for Chinese is split into two major categories, the function words and the content words. The function words contains nouns, pronouns, verbs, auxiliary verbs, adjectives, number words, measure words, interjections and onomatopoeias. Function words contain conjunctions, prepositions and particles. Furthermore, each subgroup mentioned can also have further branches dependent on the context it is used on. For example, for nouns, there can be proper nouns, location nouns, place nouns and time nouns.
+
+Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also there is a reliability factor given the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with the Chinese Story Corpus's word graph (shown with numerical values which references each word in Table ??).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{chinesewordgraph.png}
+\caption{The Chinese word graph and numbered equivalent of the word graph generated from the Chinese translation of the "Sleeping Beauty" corpus.}
+\label{fig:cngraph}
+\end{figure}
+
+Counts
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.45\textwidth}
+	\includegraphics[scale=0.9]{chinesetabletop10.png}
+	\caption{Top 10 words with the highest frequency in the Chinese translation of the corpus. Shown in table format with other graphical properties. }
+	\label{table:chinesetop}
+\end{subtable}
+\hfill
+\begin{subtable}{.45\textwidth}
+	\hspace{1.5cm} 
+	\includegraphics[scale=1]{cntabletc.png}
+	\caption{Top 10 works with highest trophic levels in the Chinese translation dataset.}
+	\label{table:chinesetoptc}
+\end{subtable}
+\caption{Partial extracts of the table data for graphical properties of the Chinese Story Corpus.}
+\end{table}
+
+Trophic
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{chinesebetweenness.png}
+	\caption{Positions of the Chinese numbered graph but with trophic levels and betweenness on the y-axis and x-axis respectively.}
+	\label{fig:cnbc}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{chinesecloseness.png}
+	\caption{Similar to the betweenness Chinese graph but with closeness centrality values instead. }
+	\label{fig:cncc}
+\end{subfigure}
+\caption{Betweenness and closeness centrality values displayed on the x-axis based on the Chinese numbered word graph.}
+\label{fig:cncentrality}
+\end{figure}
+
+Centrality
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{chineselocalclustering.png}
+	\caption{Displays the local clustering coefficient against the trophic levels.}
+	\label{fig:cnlc}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{chinesepagerank.png}
+	\caption{Displays the page rank against the trophic levels.}
+	\label{fig:cnpr}
+\end{subfigure}
+\caption{Displays the local clustering and page rank on the x-axis instead of the centrality values.}
+\label{fig:jpother}
+\end{figure}
+
+Local clustering
 
