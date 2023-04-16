@@ -202,9 +202,97 @@ Nothing clear can be correlated by studying the local clustering as almost all h
 
 In conclusion, similar results were seen when analysing the graphical properties based on the German and English translations. With German having a clearer visualisation and stronger correlation compared to the English language due to having inflections.
 
+\subsection{French}
+English and German are Germanic languages under the Indo-European family. Instead of another similar language, we study a different branch under the same family. The language in question is French which lies under the Italic branch of Indo-European family. Like before with German, French contain the same parts of speech as English and also inflectional words like with German. So words can be inflected by number (singular or plural), gender, person, case, aspect and mood. However whilst German has three genders (Masculine, Feminine and Neutral), French\cite{hawkins2015french} only has the use of two (Masculine and Feminine). 
+
+The story corpus is translated into the French story corpus so graphs can be generated off this. Where the initial word graphs shown in figure \ref{fig:fregraph}. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\includegraphics[scale=0.2]{frenchwordgraph.png}
+	\caption{French word graph generated based on the French translation of the corpus.}
+	\label{fig:freword}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\includegraphics[scale=0.2]{frenchwordgraphnumbered.png}
+	\caption{Numbered version of the word graph to provide a clearer graph. This is called the French numbered graph.}
+	\label{fig:frenum}
+\end{subfigure}
+\caption{The French word graph and numbered equivalent of the word graph generated from the French translation of the "Sleeping Beauty" corpus.}
+\label{fig:fregraph}
+\end{figure}
+
+Words of highest frequency are shown in the table extract \ref{table:frenchtop} where the majority of words seen are inflectable and used as a way to give more information. Such as the particle of vertex 93 meaning a/an or he/it represented by vertex 46. So these would be used more frequently and it is true for the case of "Sleeping Beauty".
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.45\textwidth}
+	\includegraphics[scale=0.9]{frenchtabletop10.png}
+	\caption{Top 10 words with the highest frequency in the French translation of the corpus. Shown in table format with other graphical properties. }
+	\label{table:frenchtop}
+\end{subtable}
+\hfill
+\begin{subtable}{.45\textwidth}
+	\hspace{1.5cm} 
+	\includegraphics[scale=1]{frenchtabletc.png}
+	\caption{Top 10 works with highest trophic levels in the French translation dataset.}
+	\label{table:frenchtoptc}
+\end{subtable}
+\caption{Partial extracts of the table data for graphical properties of the French Story Corpus.}
+\end{table}
+
+In relation to the story corpus, French has a high trophic coherence which is calculated to be $0.35$ which is higher than both English and German. Even though it may not be close to 1, compared to previous languages, a clearer level structure can be represented for this language when referencing the story corpus. Top ten trophic levels can be seen in Table \ref{frenchtabletc} where the higher the value, the closer the word is to the end of a sentence as all top 10 are within the last four words in their relative sentence. However the predecessors of the words have an impact on their trophic level. If the predecessors of a word is involved in other sentences at a earlier stage then the predecessors trophic value is lower which means the original value of the word is lowered. This can be seen by vertex 49 with a trophic level of 5.08 even though it is last in it's sentence. So in general, unique sentences tend to have a higher value overall.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{frenchbetweenness.png}
+	\caption{Positions of the French numbered graph but with trophic levels and betweenness on the y-axis and x-axis respectively.}
+	\label{fig:frbc}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{frenchcloseness.png}
+	\caption{Similar to the betweenness French graph but with closeness centrality values instead. }
+	\label{fig:frcc}
+\end{subfigure}
+\caption{Betweenness and closeness centrality values displayed on the x-axis based on the French numbered word graph.}
+\label{fig:frcentrality}
+\end{figure}
+
+Vertices with high betweenness has many other vertices that must pass through it to reach other vertices within their sentence. As mentioned previously, this helps identify the key bridges in the sentences by finding the vertices which control the majority of the flow of data. Furthermore the betweenness tends to coincide with the frequency as the more frequency a word is, the more likey it has more words that require it for completion. On the other hand there are vertices such as 78 ("roi")and 38 ("fois") who have a betweenness value of 6.73 and 5.54 and a count of 2 and 1 respectively. By further analysis, the reason they have high betweenness, is that they are used with a predecessor and successor of higher betweenness value, i.e. "un roi et" and "une fois un". Meaning vertices of higher betweenness like "un", "et" and "une" must pass through "roi" or "fois" to complete their pathing. Therefore even if they have a low count, they are involved a bridges to other vertices of high betweenness.
+
+As discovered in the German analysis, closeness identifies the vertices most likely divide the graph from the directed path, i.e. the words most likely to isolate the remaining sentence. Otherwise it means that the vertices are involved in other diverse sentences and has more in/out edges forming a conglomerate of vertices. Studying the graph in figure \ref{fig:frcc}, there are more vertices with high closeness and the graph shows clearly that these vertices would cause isolation for further vertices along it's path. A side note is that French seems to be the most unique language as there are a higher number of clear divisions compared to the previous languages. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{frenchlocalclustering.png}
+	\caption{Displays the local clustering coefficient against the trophic levels.}
+	\label{fig:frlc}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+	\hspace{-1cm} 
+	\includegraphics[scale=0.2]{frenchpagerank.png}
+	\caption{Displays the page rank against the trophic levels.}
+	\label{fig:frpr}
+\end{subfigure}
+\caption{Displays the local clustering and page rank on the x-axis instead of the centrality values.}
+\label{fig:frother}
+\end{figure}
+
+Finally the local clustering and page rank. Only two vertices have a local clustering value of 10 which are vertices 53 "le" and 76 "reine". Nothing concrete can be derived from this other than as before, the vertices with a local clustering value are not an end/start of a branch. Page rank values for the French story corpus and measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 "il" has a low page rank value of 1.26 as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be of influence.
+
+In conclusion, French has similar results in comparion to English and German which makes sense as they are a part of the same langauge family. So to see a different perspective, the study of other language families are undertaken such as the Japonic language family.
 
 \section{Japonic}
-Moving to a different language family. The Japonic language family is the protolanguage for Japanese and Ryūkyūan languages\cite{vovin2017origins} so it is a small language family compared to other language families like the Indo-European family. Translating the corpus into Japanese gives us a new dataset to use for graph property analysis which will be studied in comparison to the previous language family. Japanese translation of the story will be referred to as the Japanese corpus and the same 
+The Japonic language family is the protolanguage for Japanese and Ryūkyūan languages\cite{vovin2017origins} so it is a small language family compared to other language families like the Indo-European family. Translating the corpus into Japanese gives us a new dataset to use for graph property analysis which will be studied in comparison to the previous language family. Japanese translation of the story will be referred to as the Japanese corpus and the same 
 \subsection{Japanese}
 To give a larger variety of languages, Japanese is studied as it uses vastly different grammar compared to other languages. Japanese has only five lexical word classes which includes nouns, verbal nouns, nominal adjectives, verbs and adjectives. The order in which the words are structured are different to Indo-European languages since Japanese uses SOV (Subject-object-verb) compared to languages like German and English which uses SVO (Subject-verb-object). As well as this, Japanese does not have major reliability on grammatical number or gender and is more focused on their system of honorifics which indicates the speaker, listener or person it references. Therefore, Japanese may have words borrowed from other languages (these are reffered to as loanwords\cite{miura1979influence}) but their grammar is different in comparison. 
 
@@ -296,16 +384,16 @@ The main branches of Chinese are Mandarin or Cantonese with mandarin considered 
 
 Similarly to Japanese, Chinese has very few inflections and use other particles which accompany the syllable to express verbal aspect. Another similarity is the use of reduplication where a syllable is repeated to give a different meaning. Parts of speech for Chinese is split into two major categories, the function words and the content words. The function words contains nouns, pronouns, verbs, auxiliary verbs, adjectives, number words, measure words, interjections and onomatopoeias. Function words contain conjunctions, prepositions and particles. Furthermore, each subgroup mentioned can also have further branches dependent on the context it is used on. For example, for nouns, there can be proper nouns, location nouns, place nouns and time nouns.
 
-Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also there is a reliability factor given the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with the Chinese Story Corpus's word graph (shown with numerical values which references each word in Table ??).
+Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also there is a reliability factor given the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with the Chinese Story Corpus's word graph seen in figure \ref{cngraph} (shown with numerical values which references each word in Table ??).
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{chinesewordgraph.png}
+\includegraphics[scale=0.3]{chinesewordgraph.png}
 \caption{The Chinese word graph and numbered equivalent of the word graph generated from the Chinese translation of the "Sleeping Beauty" corpus.}
 \label{fig:cngraph}
 \end{figure}
 
-Counts
+The syllable with the higher count (see Table \ref{table:chinesetop}) is vertex 90 which is "de" in Pinyin. This is a particle so has a grammatical meaning and different functions to denote possession or to be accompanied by other parts of speech. Other syllables with high count include vertex 71, "yǒu", vertex 5, "gè" and vertex 0, "yī". These al have various meanings depending on their use, vertex 71 can mean "have", "is" and "are", vertex 5 can mean "this", "that", party of a size or a classifier for people/objects and vertex 0 can mean "a" or part of a number. Therefore the syllables with a high count represents the words who have the most meanings and important in the sentence structure or gender related words such as vertex 15 or 43.
 
 \begin{table}[H]
 \centering
@@ -324,7 +412,7 @@ Counts
 \caption{Partial extracts of the table data for graphical properties of the Chinese Story Corpus.}
 \end{table}
 
-Trophic
+Due to bi direction edges and reduplication of syllable usage, clear hierarchical representation cannot be obtained but trophic levels are useful to give a distribution of the data based on their positioning. Thus if there are paths that continually traverse downwards, then are grammatically correct, otherwise it means that some syllables are used in various other contexts which shifts it's value. For example, the path from vertex 57 to vertex 61 which can be seen in the Chinese betweenness graph in Figure \ref{fig:cnbc}. 
 
 \begin{figure}[H]
 \centering
@@ -345,7 +433,11 @@ Trophic
 \label{fig:cncentrality}
 \end{figure}
 
-Centrality
+Betweenness in the Chinese Story corpus (see figure \ref{fig:cnbc}) are the syllables are shown to represent the particles of vertex 90 and vertex 10. Reiterating the fact that they are the syllables that act most like bridges and needed to derive further meaning. Hence betweenness relate closely to the counts of the syllables discussed earlier.
+
+Similarly mentioned in the German analysis, closeness measures the importance of words immaterially surrounded them. Which means the vertices that are most likely to isolate further vertices in it's path, i.e. they are the vertices vital in it's path structure (controls the flow of data). Therefore, demonstrated by Figure \ref{fig:cncentrality}, vertex 98 has highest closeness as without this vertex, vertex 61 is isolated. Subsequently the predecessors of vertex 98 have higher closeness. However there are no other vertices with high closeness since most other syllables have a lot more unique connections to various other vertices which infers that they have multiple meanings rather than the uniqueness of vertex 98's portion of the path.
+
+
 
 \begin{figure}[H]
 \centering
@@ -366,5 +458,7 @@ Centrality
 \label{fig:jpother}
 \end{figure}
 
-Local clustering
+Local clustering identifies vertices involved in unique directed 3-cycles. The same idea was discovered when analysing the Japanese story corpus. For example, vertex 22 is uniquely part of the directed 3-cycle, vertex 0 -> 22 -> 71 -> 0 where vertex 22 is seen as the top because vertices 22 and 71 are involved with other vertices. Similarly how vertex 94 is involved in it's own directed 3-cycle. So local clustering doesn't identify the vertices of high importance but rather certain triples within the corpus. 
+
+The page rank identifies the vertices with influence to vertices other than their immediate neighbours.  Evidently vertices with high betweenness will also have a high page rank as they are more commonly used in the corpus. 
 
