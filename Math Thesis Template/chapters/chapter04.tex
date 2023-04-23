@@ -8,9 +8,9 @@ Estimations of around 500 language families exist and Campbell \cite{campbell201
 The aim of my research is to study modern languages that fall under the Indo-European language family and the Sino-Tibetan language family. The major language families are also known as the \emph{proto-languages} since they are the parent language to many other languages \cite{rowe2022concise}. English, German and Dutch are Germanic languages under the Indo-European language family. Russian and Polish are Balto-Slavic languages under the Indo-European family.  French and Spanish are Latin languages under the Indo-European language. Finally Chinese falls under the Sino-Tibetan family. Furthermore, I will also look at Japanese which is part of the Japonic family but would have been considered a language isolate if the Ryūkyūan languages were not distinct from Japanese \cite{campbell2010language}. Therefore all the languages mentioned will be used in translating the chosen text extract into their relative datasets.
 
 \section{Text Corpus}
-The best way in comparing the results to other languages is to have datasets that are based on the same text extract. Thus, the text extract chosen should be simple and well know. In my case, I have chosen to use the popular story in all languages known as "Sleeping Beauty". To ensure that the same version is used, the Grimm Brothers version is utilised where the original was in German and extracted from the book of children stories "Kinder- und Hausmärchen" \cite{grimm1857kinder}. So using translations of this story, word graphs will be generated and experimented on.  Additionally, instead of using the entirety of the story, the first two paragraphs are used so that the graphs are not overwhelmingly dense whilst maintaining any key attributes in the various languages. A partial extract of the first two paragraphs is given as follows (the full two paragraphs is shown in Appendix \ref{aPP:}):
+The best way in comparing the results to other languages is to have datasets that are based on the same text extract. Thus, the text extract chosen should be simple and well know. In my case, I have chosen to use the popular story in all languages known as ``Sleeping Beauty". To ensure that the same version is used, the Grimm Brothers version is utilised where the original was in German and extracted from the book of children stories ``Kinder- und Hausmärchen" \cite{grimm1857kinder}. So using translations of this story, word graphs will be generated and experimented on.  Additionally, instead of using the entirety of the story, the first two paragraphs are used so that the graphs are not overwhelmingly dense whilst maintaining any key attributes in the various languages. A partial extract of the first two paragraphs is given as follows (the full two paragraphs is shown in Appendix \ref{}):
 \begin{quote}
-In times past there lived a king and queen, who said to each other every day of their lives, "Would that we had a child!" and yet they had none. \dots There were thirteen of them in his kingdom, but as he had only provided twelve golden plates for them to eat from, one of them had to be left out.
+``In times past there lived a king and queen, who said to each other every day of their lives, ``Would that we had a child!" and yet they had none. \dots There were thirteen of them in his kingdom, but as he had only provided twelve golden plates for them to eat from, one of them had to be left out."
 \end{quote}
 In conclusion the nine datasets are created based on this text extract for graph property calculations. In the next section, the study of Indo-European languages will be undertaken, beginning with English.
 
@@ -20,19 +20,19 @@ Five languages of the Indo-European language family were analysed but detailed a
 Before the analysis can be undertaken, a brief summary of the languages structure and grammar is given. This is to ensure the increased understanding of correlations and results achieved through this process.
 
 \subsection{English}
-English words can be organised into eight different \empth{parts of speech}; Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Determiners and Conjunctions. Linguistic researchers focus on the use of these categories in different situations such as through speaking or in magazines \cite{khaisaeng2017study}. We will study the appearances of these categories in our story corpus. To achieve this, the English story corpus is converted to a dataset so that a directed graph can be generated shown in Figure \ref{fig:engword}. Additionally in replacement of having each vertex labelled by the corresponding word, each vertex will be labelled with an integer shown in Figure \ref{fig:engnum}. The corresponding integer for each word will be shown on the table of values for the graph. The entire table can be seen in Appendix \ref{app:engtable}.
+English words can be organised into eight different \emph{parts of speech}; Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Determiners and Conjunctions. Linguistic researchers focus on the use of these categories in different situations such as through speaking or in magazines \cite{khaisaeng2017study}. We will study the appearances of these categories in our story corpus. To achieve this, the English story corpus is converted to a dataset so that a directed graph can be generated shown in Figure \ref{fig:engword}. Additionally in replacement of having each vertex labelled by the corresponding word, each vertex will be labelled with an integer shown in Figure \ref{fig:engnum}. The corresponding integer for each word will be shown on the table of values for the graph. The entire table can be seen in Appendix \ref{app:engtable}.
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
 	\includegraphics[scale=0.2]{englishwordgraph.png}
-	\caption{Graph generated based on an extract of the story "Sleeping Beauty" with each unique word labelling each vertex.}
+	\caption{Graph generated based on an extract of the story ``Sleeping Beauty" with each unique word labelling each vertex.}
 	\label{fig:engword}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\textwidth}
 	\includegraphics[scale=0.2]{englishnumbergraph.png}
-	\caption{Same graph as the word graph for the English version of "Sleeping Beauty" but with numerical labelling rather than the corresponding words. The numbers are labelled in order of the unique words in alphabetical order which is also shown in the table later on.}
+	\caption{Same graph as the word graph for the English version of ``Sleeping Beauty" but with numerical labelling rather than the corresponding words. The numbers are labelled in order of the unique words in alphabetical order which is also shown in the table later on.}
 	\label{fig:engnum}
 \end{subfigure}
 \caption{Graph created from the corpus labelled with words or in integers.}
@@ -42,24 +42,50 @@ As done in the Early Experimentations of the karate club dataset, we calculate t
 
 \begin{table}[H]
 \centering
+\includegraphics[scale=0.9]{englishtabletop10.png}
+\caption{The first 10 most common words of the dataset. Generated from the English version of ``Sleeping Beauty" in a table format. }
+\label{table:englishtop}
+\end{table}
+
+We begin by analysing words with the most recurrences (see Table \ref{table:englishtop}). In the order of most frequent to least, the words are ``and'', ``the", ``a", ``to", ``had", ``he", ``of", ``that", ``be" and ``but". Note that nouns, adverbs and adjectives do not appear in the most frequent words. These are the words that are deemed more vital in the creation of structure within a sentence of the story corpus. Any sentence in ``Sleeping Beauty" will have a high chance of containing at least one of these words. Since this is a portion of a  dataset, we can compare these words to a larger dataset to see whether or not the importance of these words remain same. Word frequencies follow the Zipf curve for languages, as discussed in the previous section, so we can take another corpus to compare its frequency of words to ours. We choose to compare the story corpus to the British National Corpus (BNC) \cite{bnc2007british} which is a 100 million word collection that includes both written and spoken English language. The benefits in choosing BNC is that it contains older English so may provide clearer correlations to the story of ``Sleeping Beauty". The Brothers Grimm version began in the late 18th century. So, for the BNC, the top ten frequent words \cite{leech2014word} in order of frequencies are; ``the", ``of", ``and", ``a", ``in", ``to", ``it", ``is", ``to" and ``was". Comparing the most frequent words in both corpuses, correlations are achieved such as the repetitions of words ``the", ``to" etc. Such similarities reinforce the fact that the English language has a structured form that requires the use of these such words, as demonstrated with a much smaller corpus compared to the the BNC.
+
+\begin{table}[H]
+\centering
 \begin{subtable}{.45\textwidth}
-	\includegraphics[scale=0.9]{englishtabletop10.png}
-	\caption{The first 10 most common words of the dataset. Generated from the English version of "Sleeping Beauty" in a table format. }
-	\label{table:englishtop}
+	\centering
+	\includegraphics[scale=1]{engtabletctop.png}
+	\caption{Top 10 words ranked by their trophic levels based on the English Story Corpus.}
+	\label{table:}
 \end{subtable}
 \hfill
 \begin{subtable}{.45\textwidth}
-	\hspace{1.5cm} 
-	\includegraphics[scale=1]{engtabletc.png}
-	\caption{Top 10 words ranked by their trophic levels based on the English Story Corpus.}
+	\centering
+	\includegraphics[scale=1]{engtabletcbot.png}
+	\caption{Bottom 10 words ranked by their trophic levels based on the English Story Corpus.}
 	\label{table:englishtoptc}
 \end{subtable}
-\caption{Partial extracts of the table data for graphical properties of the English Story Corpus.}
+\caption{Partial extracts of the table data ordered by their trophic levels.}
 \end{table}
 
-We begin by analysing words with the most recurrences. In the order of most frequent to least, the words are "and", "the", "a", "to", "had", "he", "of", "that", "be" and "but". Note that nouns, adverbs and adjectives do not appear in the most recurring words. These are the words that are deemed more vital in the creation of structure within a sentence of the story corpus. Any sentence in "Sleeping Beauty" will have a high chance of containing at least one of these words. Since this is a small dataset, we can compare these words to a larger dataset to see whether or not the importance of these words are still the same. Word frequencies follow the Zipf curve for languages, as discussed in the previous section, so we can take another corpus to compare its frequency of words to ours. We choose to compare the story corpus to the British National Corpus (BNC) \cite{bnc2007british} which is a 100 million word collection that includes both written and spoken language. The benefits in choosing BNC is that it contains older English so may provide clearer correlations to the story of "Sleeping Beauty" as the Brothers Grimm version began in the late 18th century. Hence for the BNC, the top ten frequent words \cite{leech2014word} in order of frequency are; "the", "of", "and", "a", "in", "to", "it", "is", "to" and "was". Comparing the most frequent words in both corpuses, correlations are achieved such as the repetitions of words "the", "to" etc. Such similarities reinforce the fact that the English language has a structured form that requires the use of these such words, as demonstrated with a much smaller corpus compared to the the BNC.
-
 Now onto the analysis of Trophic levels and coherence (see Table \ref{table:englishtoptc}). When applying trophic level calculations on directed word graphs, the levels represent the position of the word in a sentence similarly shown in the analysis of network data in empirically-derived directed networks\cite{johnson2017looplessness}. For the "Sleeping Beauty" English word graph, the lower trophic levels tends to be sentence starters and the higher levels are the ends of sentences. This is supported by the data because the top five words with largest trophic levels values (ranging from 10.00-6.01) are all sentence enders. Along with the bottom five being words (trophic values ranging from 0.49-0.00) nearer the start of sentences such as "there" and "times" in relation to the corpus. However trophic incoherence is calculated to be 0.969 which means that the levels in the graph can not be distinguished and are not clear. Since the $\text{trophic coherence} = 1 - \text{trophic incoherence} = 0.03$ which is due to the fact of the vast difference of sentence lengths in the corpus. Which varies from the shortest sentence of five words and the longest of forty seven words. Consequently the for the extract used, it may not provide a clear hierarchical layout but still provides a good layout of sentence flow from the lowest level to the highest level. Demonstrated by further graphs with the trophic levels as the y-axis ranging from 0 at the top to 10 at the bottom to provide a normal cascade of words. Includes other graphical properties starting with betweenness and closeness centrality (Figures \ref{fig:engbc} and \ref{fig:engcc}) shown next.
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.45\textwidth}
+	\centering
+	\includegraphics[scale=1]{engtabletctop.png}
+	\caption{Top 10 words ranked by their trophic levels based on the English Story Corpus.}
+	\label{table:}
+\end{subtable}
+\hfill
+\begin{subtable}{.45\textwidth}
+	\centering
+	\includegraphics[scale=1]{engtabletcbot.png}
+	\caption{Bottom 10 words ranked by their trophic levels based on the English Story Corpus.}
+	\label{table:englishtoptc}
+\end{subtable}
+\caption{Partial extracts of the table data ordered by their trophic levels.}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -136,17 +162,25 @@ Table \ref{table:germantop} shows the most common ten words in the German datase
 
 \begin{table}[H]
 \centering
+\includegraphics[scale=0.9]{germantabletop10.png}
+\caption{Top 10 words with the highest frequency in the German translation of the corpus. Shown in table format with other graphical properties. }
+\label{table:germantop}
+\end{table}
+
+\begin{table}[H]
+\centering
 \begin{subtable}{.45\textwidth}
-	\includegraphics[scale=0.9]{germantabletop10.png}
-	\caption{Top 10 words with the highest frequency in the German translation of the corpus. Shown in table format with other graphical properties. }
-	\label{table:germantop}
+	\centering
+	\includegraphics[scale=1]{gertabletctop.png}
+	\caption{Top 10 works with highest trophic levels in the German translation dataset.}
+	\label{table:germantoptc}
 \end{subtable}
 \hfill
 \begin{subtable}{.45\textwidth}
-	\hspace{1.5cm} 
-	\includegraphics[scale=1]{gertabletc.png}
-	\caption{Top 10 works with highest trophic levels in the German translation dataset.}
-	\label{table:germantoptc}
+	\centering
+	\includegraphics[scale=1]{gertabletcbot.png}
+	\caption{Bottom 10 words ranked by their trophic levels based on the German Story Corpus.}
+	\label{table:germanbottc}
 \end{subtable}
 \caption{Partial extracts of the table data for graphical properties of the German Story Corpus.}
 \end{table}
@@ -226,20 +260,27 @@ The story corpus is translated into the French story corpus so graphs can be gen
 \end{figure}
 
 Words of highest frequency are shown in the table extract \ref{table:frenchtop} where the majority of words seen are inflectable and used as a way to give more information. Such as the particle of vertex 93 meaning a/an or he/it represented by vertex 46. So these would be used more frequently and it is true for the case of "Sleeping Beauty".
+\begin{table}[H]
+\centering
+\includegraphics[scale=1]{frenchtabletop10.png}
+\caption{Top 10 words with the highest frequency in the French translation of the corpus. Shown in table format with other graphical properties. }
+\label{table:frenchtop}
+\end{table}
 
 \begin{table}[H]
 \centering
 \begin{subtable}{.45\textwidth}
-	\includegraphics[scale=0.9]{frenchtabletop10.png}
-	\caption{Top 10 words with the highest frequency in the French translation of the corpus. Shown in table format with other graphical properties. }
-	\label{table:frenchtop}
+	\centering
+	\includegraphics[scale=1]{frenchtabletctop.png}
+	\caption{Top 10 works with highest trophic levels in the French translation dataset.}
+	\label{table:frenchtoptc}
 \end{subtable}
 \hfill
 \begin{subtable}{.45\textwidth}
-	\hspace{1.5cm} 
-	\includegraphics[scale=1]{frenchtabletc.png}
-	\caption{Top 10 works with highest trophic levels in the French translation dataset.}
-	\label{table:frenchtoptc}
+	\centering
+	\includegraphics[scale=1]{frenchtabletcbot.png}
+	\caption{Bottom 10 words ranked by their trophic levels based on the French Story Corpus.}
+	\label{table:frenchbottc}
 \end{subtable}
 \caption{Partial extracts of the table data for graphical properties of the French Story Corpus.}
 \end{table}
@@ -310,17 +351,25 @@ With previous languages having a largest frequency of nine, with Japanese there 
 
 \begin{table}[H]
 \centering
+\includegraphics[scale=1]{japanesetabletop10.png}
+\caption{Top 10 words with the highest frequency in the Japanese translation of the corpus. Shown in table format with other graphical properties. }
+\label{table:japanesetop}
+\end{table}
+
+\begin{table}[H]
+\centering
 \begin{subtable}{.45\textwidth}
-	\includegraphics[scale=0.9]{japanesetabletop10.png}
-	\caption{Top 10 words with the highest frequency in the Japanese translation of the corpus. Shown in table format with other graphical properties. }
-	\label{table:japanesetop}
+	\centering
+	\includegraphics[scale=1]{jptabletctop.png}
+	\caption{Top 10 works with highest trophic levels in the Japanese translation dataset.}
+	\label{table:japanesentoptc}
 \end{subtable}
 \hfill
 \begin{subtable}{.45\textwidth}
-	\hspace{1.5cm} 
-	\includegraphics[scale=1]{jptabletc.png}
-	\caption{Top 10 works with highest trophic levels in the Japanese translation dataset.}
-	\label{table:japanesentoptc}
+	\centering
+	\includegraphics[scale=1]{jptabletcbot.png}
+	\caption{Bottom 10 words ranked by their trophic levels based on the Japanese Story Corpus.}
+	\label{table:japanesebottc}
 \end{subtable}
 \caption{Partial extracts of the table data for graphical properties of the Japanese Story Corpus.}
 \end{table}
@@ -398,17 +447,25 @@ The syllable with the higher count (see Table \ref{table:chinesetop}) is vertex 
 
 \begin{table}[H]
 \centering
+\includegraphics[scale=1]{chinesetabletop10.png}
+\caption{Top 10 words with the highest frequency in the Chinese translation of the corpus. Shown in table format with other graphical properties. }
+\label{table:chinesetop}
+\end{table}
+
+\begin{table}[H]
+\centering
 \begin{subtable}{.45\textwidth}
-	\includegraphics[scale=0.9]{chinesetabletop10.png}
-	\caption{Top 10 words with the highest frequency in the Chinese translation of the corpus. Shown in table format with other graphical properties. }
-	\label{table:chinesetop}
+	\centering
+	\includegraphics[scale=1]{cntabletctop.png}
+	\caption{Top 10 works with highest trophic levels in the Chinese translation dataset.}
+	\label{table:chinesetoptc}
 \end{subtable}
 \hfill
 \begin{subtable}{.45\textwidth}
-	\hspace{1.5cm} 
-	\includegraphics[scale=1]{cntabletc.png}
-	\caption{Top 10 works with highest trophic levels in the Chinese translation dataset.}
-	\label{table:chinesetoptc}
+	\centering
+	\includegraphics[scale=1]{cntabletcbot.png}
+	\caption{Bottom 10 words ranked by their trophic levels based on the Chinese Story Corpus.}
+	\label{table:chinesebottc}
 \end{subtable}
 \caption{Partial extracts of the table data for graphical properties of the Chinese Story Corpus.}
 \end{table}
