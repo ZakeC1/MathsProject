@@ -42,7 +42,7 @@ As done in the Early Experimentations of the karate club dataset, we calculate t
 
 \begin{table}[H]
 \centering
-\includegraphics[scale=0.9]{englishtabletop10.png}
+\includegraphics[scale=1]{englishtabletop10.png}
 \caption{The first 10 most common words of the dataset. Generated from the English version of ``Sleeping Beauty" in a table format. }
 \label{table:englishtop}
 \end{table}
@@ -71,18 +71,32 @@ Now onto the analysis of Trophic levels and coherence (see Table \ref{table:engl
 
 \begin{table}[H]
 \centering
-\begin{subtable}{.45\textwidth}
+\begin{subtable}{.2\textwidth}
 	\centering
-	\includegraphics[scale=1]{engtabletctop.png}
-	\caption{Top 10 words ranked by their trophic levels based on the English Story Corpus.}
-	\label{table:}
+	\includegraphics[scale=0.9]{englishtablebc.png}
+	\caption{}
+	\label{table:englishtablebc}
 \end{subtable}
 \hfill
-\begin{subtable}{.45\textwidth}
+\begin{subtable}{.2\textwidth}
 	\centering
-	\includegraphics[scale=1]{engtabletcbot.png}
-	\caption{Bottom 10 words ranked by their trophic levels based on the English Story Corpus.}
-	\label{table:englishtoptc}
+	\includegraphics[scale=0.9]{englishtablecc.png}
+	\caption{}
+	\label{table:englishtablecc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{englishtablelc.png}
+	\caption{}
+	\label{table:englishtablelc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{englishtablepr.png}
+	\caption{}
+	\label{table:englishtablepr}
 \end{subtable}
 \caption{Partial extracts of the table data ordered by their trophic levels.}
 \end{table}
@@ -162,7 +176,7 @@ Table \ref{table:germantop} shows the most common ten words in the German datase
 
 \begin{table}[H]
 \centering
-\includegraphics[scale=0.9]{germantabletop10.png}
+\includegraphics[scale=1]{germantabletop10.png}
 \caption{Top 10 words with the highest frequency in the German translation of the corpus. Shown in table format with other graphical properties. }
 \label{table:germantop}
 \end{table}
@@ -188,6 +202,38 @@ Table \ref{table:germantop} shows the most common ten words in the German datase
 Analysing the trophic levels, top ten seen in Table \ref{table:germantoptc}, the results show that most words congregate at around 7.1. This can be more evidently seen in visual representations on figures \ref{fig:gercentrality} and \ref{fig:gerother}. From the same figures, there is a unique path from vertex 31 to 29 which is equivalent "Es waren ihrer dreizehn in seinem Reiche, weil er". This is the beginning of a sentence belonging to the German story corpus and holds all unique words that are not used in other sentences. Hence has not been influenced by other vertices so has a clear hierarchical structure which leads to the low trophic levels. Whereas most other sentences share words which causes the conglomeration nearer 7. So the German language has more options for word choices that causes the increased possibility of unique sentences. Meaning that their trophic levels are not evenly distributed like the English version. 
 
 Trophic coherence has also benefited from the uniqueness of word choices as for the German graph, trophic coherence is calculated to be $0.23$. This is larger than the English graph which was 0.03. Therefore the German graph has a larger hierarchical structure compared to the English graph with clearer levels as demonstrated in further graphs below when analysing other properties.
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{germantablebc.png}
+	\caption{}
+	\label{table:germantablebc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{germantablecc.png}
+	\caption{}
+	\label{table:germantablecc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{germantablelc.png}
+	\caption{}
+	\label{table:germantablelc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{germantablepr.png}
+	\caption{}
+	\label{table:germantablepr}
+\end{subtable}
+\caption{}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -287,6 +333,38 @@ Words of highest frequency are shown in the table extract \ref{table:frenchtop} 
 
 In relation to the story corpus, French has a high trophic coherence which is calculated to be $0.35$ which is higher than both English and German. Even though it may not be close to 1, compared to previous languages, a clearer level structure can be represented for this language when referencing the story corpus. Top ten trophic levels can be seen in Table \ref{frenchtabletc} where the higher the value, the closer the word is to the end of a sentence as all top 10 are within the last four words in their relative sentence. However the predecessors of the words have an impact on their trophic level. If the predecessors of a word is involved in other sentences at a earlier stage then the predecessors trophic value is lower which means the original value of the word is lowered. This can be seen by vertex 49 with a trophic level of 5.08 even though it is last in it's sentence. So in general, unique sentences tend to have a higher value overall.
 
+\begin{table}[H]
+\centering
+
+\begin{subtable}{.27\textwidth}
+	\includegraphics[scale=0.9]{frenchtablebc.png}
+	\caption{}
+	\label{table:frenchtablebc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{frenchtablecc.png}
+	\caption{}
+	\label{table:frenchtablecc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{frenchtablelc.png}
+	\caption{}
+	\label{table:frenchtablelc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{frenchtablepr.png}
+	\caption{}
+	\label{table:frenchtablepr}
+\end{subtable}
+\caption{}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
@@ -375,6 +453,38 @@ With previous languages having a largest frequency of nine, with Japanese there 
 \end{table}
 
 Trophic levels cannot be applied to this dataset like with previous languages. This is due to the graph having bidirectional edges such as the edge between vertex 25 and 5 which is part of the sentence about having only 12 plates. Also vertex 0 contains a self loop which and is part of the word "everyday", the back to back word that creates a different meaning is known as \emph{reduplication}. So there is not a clear hierarchical structure to be inferred to. The largest trophic level is vertex 56 (refers to female) which appears in middle of sentences with the Japanese story corpus. Currently the trophic levels cannot be calculated accurately but can be if the dataset is split into specific group of words depending on it's meaning rather than character by character. For example vertex 59 and 46 means "child" together but is split in the dataset as the program does not recognise characters together as a singular word. However this either requires the full understanding of the Japanese language or heavy cross-referencing and checking. 
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{japanesetablebc.png}
+	\caption{}
+	\label{table:japanesetablebc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{japanesetablecc.png}
+	\caption{}
+	\label{table:japanesetablecc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{japanesetablelc.png}
+	\caption{}
+	\label{table:japanesetablelc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{japanesetablepr.png}
+	\caption{}
+	\label{table:japanesetablepr}
+\end{subtable}
+\caption{}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -471,6 +581,38 @@ The syllable with the higher count (see Table \ref{table:chinesetop}) is vertex 
 \end{table}
 
 Due to bi direction edges and reduplication of syllable usage, clear hierarchical representation cannot be obtained but trophic levels are useful to give a distribution of the data based on their positioning. Thus if there are paths that continually traverse downwards, then are grammatically correct, otherwise it means that some syllables are used in various other contexts which shifts it's value. For example, the path from vertex 57 to vertex 61 which can be seen in the Chinese betweenness graph in Figure \ref{fig:cnbc}. 
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{chinesetablebc.png}
+	\caption{}
+	\label{table:chinesetablebc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{chinesetablecc.png}
+	\caption{}
+	\label{table:chinesetablecc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{chinesetablelc.png}
+	\caption{}
+	\label{table:chinesetablelc}
+\end{subtable}
+\hfill
+\begin{subtable}{.2\textwidth}
+	\centering
+	\includegraphics[scale=0.9]{chinesetablepr.png}
+	\caption{}
+	\label{table:chinesetablepr}
+\end{subtable}
+\caption{}
+\end{table}
 
 \begin{figure}[H]
 \centering
