@@ -294,7 +294,7 @@ In conclusion, similar results were seen when analysing the graphical properties
 \subsection{French}
 English and German are Germanic languages under the Indo-European family. Instead of another Germanic language, we study a different branch under the Indo-European family. The language being French which lies under the Italic branch of the same family. Similarly to German, French contains the same parts of speech as English but also inflectional words. So words can be inflected by number (singular or plural), gender, person, case, aspect and mood. However whilst German has three genders (Masculine, Feminine and Neutral), French \cite{hawkins2015french} only uses two, masculine and feminine. 
 
-The story corpus is translated into the French version so graphs can be generated off this. Where the initial word graphs are shown in figure \ref{fig:fregraph}. 
+The story corpus is translated into the French version so graphs can be generated off this. Where the initial word graphs are shown in Figure \ref{fig:fregraph}. 
 
 \begin{figure}[H]
 \centering
@@ -313,13 +313,14 @@ The story corpus is translated into the French version so graphs can be generate
 \label{fig:fregraph}
 \end{figure}
 
-Words of highest frequency are shown in the table extract \ref{table:frenchtop} where the majority of words seen are inflectable and used as a way to give more information. Such as the particle of vertex 93 meaning a/an or he/it represented by vertex 46. So these would be used more frequently and it is true for the case of "Sleeping Beauty".
 \begin{table}[H]
 \centering
 \includegraphics[scale=1]{frenchtabletop10.png}
 \caption{Top 10 words with the highest frequency in the French translation of the corpus. Shown in table format with other graphical properties. }
 \label{table:frenchtop}
 \end{table}
+
+Words of highest frequency are shown in the extract Table \ref{table:frenchtop} where the majority of words seen are inflectable and used as a way to give more information. Such as the particle of vertex 93 meaning a/an or vertex 46 meaning he/it. So these would be used more frequently and it is generally true for the French language.
 
 \begin{table}[H]
 \centering
@@ -339,11 +340,10 @@ Words of highest frequency are shown in the table extract \ref{table:frenchtop} 
 \caption{Partial extracts of the table data for graphical properties of the French Story Corpus.}
 \end{table}
 
-In relation to the story corpus, French has a high trophic coherence which is calculated to be $0.35$ which is higher than both English and German. Even though it may not be close to 1, compared to previous languages, a clearer level structure can be represented for this language when referencing the story corpus. Top ten trophic levels can be seen in Table \ref{frenchtabletc} where the higher the value, the closer the word is to the end of a sentence as all top 10 are within the last four words in their relative sentence. However the predecessors of the words have an impact on their trophic level. If the predecessors of a word is involved in other sentences at a earlier stage then the predecessors trophic value is lower which means the original value of the word is lowered. This can be seen by vertex 49 with a trophic level of 5.08 even though it is last in it's sentence. So in general, unique sentences tend to have a higher value overall.
+In relation to the story corpus, French has a high trophic coherence which is calculated to be $0.36$ which is higher than both English and German. Even though it may not be close to 1, in comparison to previous languages, a clearer level structure can be identified for the French language. Top 10 trophic levels can be seen in Table \ref{table:frenchtoptc} where the high values represent the words nearer to the end of a sentence. All top 10 are within the last four words of sentences in the story corpus. However the predecessors of the words have an impact on their trophic level. If the predecessors of a word is involved in other sentences at a earlier stage then the predecessors trophic value will be lowered. Subsequently lowering the trophic levels of the neighbourhood of the word. This can be seen by vertex 49 who has a trophic level of 5.08 even though it is last in its sentence.
 
 \begin{table}[H]
 \centering
-
 \begin{subtable}{.27\textwidth}
 	\includegraphics[scale=0.9]{frenchtablebc.png}
 	\caption{}
@@ -371,7 +371,10 @@ In relation to the story corpus, French has a high trophic coherence which is ca
 	\label{table:frenchtablepr}
 \end{subtable}
 \caption{}
+\label{table:frenchdata}
 \end{table}
+
+Tables \ref{table:frenchdata} (a)-(d) shows an top 10 extract of Table \ref{app:} in the order of their corresponding graph property value.
 
 \begin{figure}[H]
 \centering
@@ -392,9 +395,9 @@ In relation to the story corpus, French has a high trophic coherence which is ca
 \label{fig:frcentrality}
 \end{figure}
 
-Vertices with high betweenness has many other vertices that must pass through it to reach other vertices within their sentence. As mentioned previously, this helps identify the key bridges in the sentences by finding the vertices which control the majority of the flow of data. Furthermore the betweenness tends to coincide with the frequency as the more frequency a word is, the more likey it has more words that require it for completion. On the other hand there are vertices such as 78 ("roi")and 38 ("fois") who have a betweenness value of 6.73 and 5.54 and a count of 2 and 1 respectively. By further analysis, the reason they have high betweenness, is that they are used with a predecessor and successor of higher betweenness value, i.e. "un roi et" and "une fois un". Meaning vertices of higher betweenness like "un", "et" and "une" must pass through "roi" or "fois" to complete their pathing. Therefore even if they have a low count, they are involved a bridges to other vertices of high betweenness.
+Vertices with high betweenness will have many other vertices that must connect to it in order to reach other vertices within their sentence. As mentioned in previous language analysis, betweenness helps identify the key bridges in the sentences by finding the vertices which control the majority of the flow of data. Furthermore the betweenness coincides with the frequency. On the other hand there are vertices such as vertex 78 ("roi") and vertex 38 ("fois") who have a betweenness value of 6.73 and 5.54 (see Table \ref{table:frenchtablebc})respectively but only a count of 2 and 1. By further analysis, the reason they have high betweenness, is that they are used with a predecessor and successor of higher betweenness value, i.e. "un roi et" and "une fois un". Consequently causing its own betweenness value to be inflated because "un", "et" and "une" must pass through "roi" or "fois" to complete their word pathing. Therefore, if vertices have a low count but are connected to other vertices of high betweenness, then their values will relatively increased.
 
-As discovered in the German analysis, closeness identifies the vertices most likely divide the graph from the directed path, i.e. the words most likely to isolate the remaining sentence. Otherwise it means that the vertices are involved in other diverse sentences and has more in/out edges forming a conglomerate of vertices. Studying the graph in figure \ref{fig:frcc}, there are more vertices with high closeness and the graph shows clearly that these vertices would cause isolation for further vertices along it's path. A side note is that French seems to be the most unique language as there are a higher number of clear divisions compared to the previous languages. 
+As discovered in the German analysis, closeness centrality identifies the vertices most likely divide the graph from their directed path, i.e. the words most likely to isolate the remaining sentence. Otherwise vertices are involved in a diverse range of sentences causing a high degree where the formation of vertex conglomerates can be seen (see Figure \ref{fig:frcc} where a clustering of vertices is shown in the upper left quadrant). Studying the graph in Figure \ref{fig:frcc}, French words have more vertices with a variety of high closeness values. The graph shows clearly that vertices of high closeness would cause isolation for further vertices along it's path. According to the visualisations, French is the most unique language out of the three languages seen so far as there is a higher number of clear divisions in the closeness values.
 
 \begin{figure}[H]
 \centering
@@ -415,9 +418,11 @@ As discovered in the German analysis, closeness identifies the vertices most lik
 \label{fig:frother}
 \end{figure}
 
-Finally the local clustering and page rank. Only two vertices have a local clustering value of 10 which are vertices 53 "le" and 76 "reine". Nothing concrete can be derived from this other than as before, the vertices with a local clustering value are not an end/start of a branch. Page rank values for the French story corpus and measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 "il" has a low page rank value of 1.26 as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be of influence.
+Finally the local clustering coefficients and page rank. Only two vertices have a local clustering coefficient of 10 which are vertex 53 ``le" and vertex 76 ``reine" (see Figure \ref{fig:frlc} and Table \ref{table:frenchtablelc}). In the context of French, nothing particular can be derived. However when studying the graphs of local clustering in various languages, the vertices with a local clustering value are never an start or end to a branch.
 
-In conclusion, French has similar results in comparion to English and German which makes sense as they are a part of the same langauge family. So to see a different perspective, the study of other language families are undertaken such as the Japonic language family.
+ Page rank values for the French story corpus and measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 "il" has a low page rank value of 1.26 as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be of influence.
+
+In conclusion, French has similar results in comparison to English and German which makes sense as they are a part of the same language family. So to see a different perspective, the study of other language families are undertaken such as the Japonic language family.
 
 \section{Japonic}
 The Japonic language family is the protolanguage for Japanese and Ryūkyūan languages\cite{vovin2017origins} so it is a small language family compared to other language families like the Indo-European family. Translating the corpus into Japanese gives us a new dataset to use for graph property analysis which will be studied in comparison to the previous language family. Japanese translation of the story will be referred to as the Japanese corpus and the same 
