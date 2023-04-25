@@ -154,29 +154,27 @@ Immediately, the local clustering graph shows very few vertices who has a high l
 In conclusion, when analysing the English language, trophic levels have provided a naturally flow of data presentation from top to bottom in the various graphs generated. Where some sections of the graph are grammatically correct when following their flows. Betweenness centrality and page rank both identified the words of most importance with respects to their neighbours. Closeness centrality also identified words of key importance but at a local level. Finally local clustering coefficients do not provide sufficient benefits when visualising the dataset in the English language. Therefore the results generated based on the English version can be extrapolated to represent the English language. Which is achieved through the identification of the words position in the structure of a sentence and its relative importance. This could also be used for languages that have a similar grammatical structure to English. Now we move onto the analysis of a different translation of the story corpus, German.
 
 \subsection{German}
-German is a Germanic language under the Indo-European language family, same as English. However whilst Modern English no longer use inflectional case system, the German language still does\cite{durrell2011hammer}. So as well as the parts of speech like in English, German words can be divided into two groups, the ones who are \emph{inflectable} and \emph{uninflectable}. If a word is inflectable then their form changes based on the context that the word is used in. These include the three genders for the words, the four cases (nominative, accusative, genitive and dative) and number (singular or plural). Uninflectable words are known as modal particles and mainly used to highlight an emotion of the sentence in spoken language. Therefore German language considerably more varied than the English language so the dataset in theory would contain more unique words overall. This is proven to be true as the dataset for German contains 109 words whilst English had 99.
+German is also a Germanic language under the Indo-European language family, same as English. However whilst modern English no longer uses the inflectional case system in grammar, the German language still does\cite{durrell2011hammer}. So as well as the parts of speech in English, German words can be divided into two groups, the words which are \emph{inflectable} and \emph{uninflectable}. If a word is inflectable then their form changes based on the context that the word is used in. These include the three genders for the words (masculine, feminine and neutral), the four cases (nominative, accusative, genitive and dative) and the number (singular or plural). Uninflectable words are known as \emph{modal particles} and mainly used to highlight an emotion of the sentence in spoken language. Therefore the German language is considerably more varied compared to the English language. Meaning that, in theory, the dataset would contain more unique words overall. Which is proven to be true as the dataset based on the story corpus for German contains 109 words whilst English had only 99.
 
-Expectations of the graph properties for the German language is that there would be more unique words of higher importance based on the different genders for words. On average, sentence lengths should also be longer due to the generated words which will be seen in trophic levels if it is the case. Word graphs for the German version of the corpus are generated and shown in figure \ref{fig:gergraph}. Similarly as before, each number references the same word in it's position.
+Expectations of the graph properties for the German language is that there would be more unique words of higher importance based on the different genders for words and particles. Word graphs for the German version of the story corpus are generated and shown in Figure \ref{fig:gergraph}. Similarly as before, each number references the same word in it's position.
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
 	\includegraphics[scale=0.3]{germanwordgraph.png}
-	\caption{German word graph generated based on the German translation of the corpus.}
+	\caption{}
 	\label{fig:gerword}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.45\textwidth}
 	\hspace{-2cm} 
 	\includegraphics[scale=0.3]{germanwordgraphnumbered.png}
-	\caption{Numbered version of the word graph to provide a clearer graph. This is called the German numbered graph.}
+	\caption{}
 	\label{fig:gernum}
 \end{subfigure}
-\caption{The German word graph and numbered equivalent of the word graph generated from the German translation of the "Sleeping Beauty" corpus.}
+\caption{The German  (a) word graph and (b) numbered equivalent of the word graph generated from the German translation of the "Sleeping Beauty" corpus.}
 \label{fig:gergraph}
 \end{figure}
-
-Table \ref{table:germantop} shows the most common ten words in the German dataset along with each graph property value. The translation to English for each word in the order of the table is as follows; "and", "a" (Masculine), "the" (Feminine), "to", "a" (Feminine), "Queen", "King", "not", "himself/herself/itself" (dependent on the pronoun this refers to) and "the" (Neutral). As expected when comparing to the English dataset most words appear in both translations as the top ten, in particular the top three. Which we recall was "and", "the" and "a". However rather than a cumulative count of "the" in English, the German translation has multiple versions which may counteract each others importance. By retaining the inflectable changes, the average count is lower for the German translation. Additionally the range has also decreased. For example, "the" in English was split into "die", "der" and "das" in German. By noting these key differences, the graphical properties will be analysed starting with trophic coherence.
 
 \begin{table}[H]
 \centering
@@ -184,6 +182,8 @@ Table \ref{table:germantop} shows the most common ten words in the German datase
 \caption{Top 10 words with the highest frequency in the German translation of the corpus. Shown in table format with other graphical properties. }
 \label{table:germantop}
 \end{table}
+
+Table \ref{table:germantop} shows the most common ten words in the German dataset along with each graph property value. The translation to English for each word in the order of the table is ``and", ``a" (Masculine), ``the" (Feminine), ``to", ``a" (Feminine), ``Queen", ``King", ``not", ``himself/herself/itself" (dependent on the pronoun this refers to) and ``the" (Neutral). As expected when comparing to the English dataset most words appear in both translations as the top ten, in particular the top three. Which we recall was ``and", ``the" and ``a" for the English dataset. However rather than a cumulative count of ``the" in English, the German translation has multiple versions. This may counteract each others importance and bring they values lower. By retaining the inflectable changes in grammar, the average count is lower for the German translation. Additionally the range of frequencies has also decreased from 9-1 to 7-1. For example, "the" in English was split into "die", "der" and "das" in German. By noting these key differences, the graphical properties will be analysed.
 
 \begin{table}[H]
 \centering
@@ -203,9 +203,9 @@ Table \ref{table:germantop} shows the most common ten words in the German datase
 \caption{Partial extracts of the table data for graphical properties of the German Story Corpus.}
 \end{table}
 
-Analysing the trophic levels, top ten seen in Table \ref{table:germantoptc}, the results show that most words congregate at around 7.1. This can be more evidently seen in visual representations on figures \ref{fig:gercentrality} and \ref{fig:gerother}. From the same figures, there is a unique path from vertex 31 to 29 which is equivalent "Es waren ihrer dreizehn in seinem Reiche, weil er". This is the beginning of a sentence belonging to the German story corpus and holds all unique words that are not used in other sentences. Hence has not been influenced by other vertices so has a clear hierarchical structure which leads to the low trophic levels. Whereas most other sentences share words which causes the conglomeration nearer 7. So the German language has more options for word choices that causes the increased possibility of unique sentences. Meaning that their trophic levels are not evenly distributed like the English version. 
+Analysis of the trophic levels demonstrates that most words congregate at around 7.3. This can be more evidently seen in the graphical representations on Figures \ref{fig:gercentrality} and \ref{fig:gerother} later on. From the same graphs, there is a unique path from vertex 31 to 29 which is equivalent to the translation ``Es waren ihrer dreizehn in seinem Reiche, weil er". This path is grammatically correct and represents the beginning of a sentence belonging to the German story corpus. Furthermore this portion holds only unique words, hence has not been influenced by other vertices so demonstrates a clear hierarchical structure. Which is the reason the words used are of low trophic levels. Whereas most other sentences share words which causes the conglomeration nearer 7.3. Consequently the German language has more options for word choices which means the increased probability of unique sentences.
 
-Trophic coherence has also benefited from the uniqueness of word choices as for the German graph, trophic coherence is calculated to be $0.23$. This is larger than the English graph which was 0.03. Therefore the German graph has a larger hierarchical structure compared to the English graph with clearer levels as demonstrated in further graphs below when analysing other properties.
+Trophic coherence has also benefited from the uniqueness of word choices since for the German graph, trophic coherence is calculated to be $0.29$. This is larger than the English graph which was $0.09$. Therefore the German graph has a clearer hierarchical structure compared to the English graph with clearer levels as demonstrated in further graphs below when analysing other properties.
 
 \begin{table}[H]
 \centering
@@ -237,7 +237,10 @@ Trophic coherence has also benefited from the uniqueness of word choices as for 
 	\label{table:germantablepr}
 \end{subtable}
 \caption{}
+\label{table:germandata}
 \end{table}
+
+Entirety of the data presented in table form can be seen in Appendix \ref{app:}. Table \ref{table:germandata} (a)-(d) shows an extract of the top 10 complex values in order of highest to lowest for each property.
 
 \begin{figure}[H]
 \centering
@@ -258,11 +261,11 @@ Trophic coherence has also benefited from the uniqueness of word choices as for 
 \label{fig:gercentrality}
 \end{figure}
 
-Assessing the graphs visually through Figures \ref{fig:gerbc} and \ref{fig:gercc}. Vertices 84 and 26 have the highest betweenness which correlates to the the frequencies of the words in the German Story Corpus. This was also the case of the English version as these refer to the words "ein" and "und" which are the most commonly used as bridges/links in sentences.
+Assessing the visual graphs (Figures \ref{fig:gerbc} and \ref{fig:gercc}), we identify vertex 84 and 26 who have the highest betweenness  values. A correlation to the frequencies of the words in the German Story Corpus can be seen through these vertices. Additionally, the same correlation was also true in the English version because the vertices in both versions referred to the words that are most commonly used as bridges or links in sentences. In the German case, the words are ``ein" and ``und".
 
-With closeness centrality, since it is a measure of influence on nearby words, the graph shows that the vertices 97, 13, 33, 51 and 41 has the largest values. These all correlate to the second to last word of each sentence apart from the first sentence which has the word "Kind". However "Kind" is used elsewhere meaning that the vertices mentioned before are unique and essential as a bridge in it's nearby words. Otherwise the graph will be disconnected if they are removed. Note that the orange vertices in Figure \ref{fig:gercc} are the unique words predecessors to the vertices mentioned earlier and the last word of every sentence always has a value of zero.
+With closeness centrality, it is a measure of influence on nearby words, the graph in Figure \ref{fig:gercc} shows that the vertices 97, 13, 33, 51 and 41 have the largest closeness values. These all correspond to the second to last word of each sentence apart from the first sentence which has the word ``Kind" as the second to last word. However ``Kind" is also used elsewhere meaning that its closeness value was influenced through other connections. The vertices of high closeness are unique and essential as a bridge in it's nearby words. Otherwise the neighbours of these vertices are likely to be isolated. Note that the orange vertices in Figure \ref{fig:gercc} are the unique words predecessors to the vertices of high closeness and the last word of every sentence always has a value of zero.
 
-Therefore betweenness identifies the words of key importance that are used most commonly as connectors. Meanwhile closeness identifies the words most likely to isolate vertices of the graph when following the sentence flow, i.e. breaks up the rest of the sentence into unique words.
+Therefore betweenness identifies the words of key importance that are used most commonly as connectors. Meanwhile closeness identifies the words most likely to isolate vertices of the graph when following the sentence flow, i.e. breaks up the rest of the sentence into unique words. Observe that the same pattern was seen in the English version but was set aside due to there being only one vertex of high closeness. However the German version shows a correlation of local importance to unique words which means that the English version may contain the same correlation.
 
 \begin{figure}[H]
 \centering
@@ -283,14 +286,15 @@ Therefore betweenness identifies the words of key importance that are used most 
 \label{fig:gerother}
 \end{figure}
 
-Nothing clear can be correlated by studying the local clustering as almost all have a local clustering of zero apart from six vertices. Three of which are vertices 57, 73 and 66 which corresponds to the words "könig", "sich" and "nicht" which are not unique words in the German story corpus. Whereas vertices with a high page rank correlate to either conjunctions, vertex 84 (und), or words that accompany other words like pronouns or articles, vertices 26 (ein), 27 (eine) etc. Therefore high page rank relates to basic building blocks for the language that are used frequently frequently, can be extended to the German language as a whole.
+Nothing prominent can be derived by studying the local clustering coefficients (see Figure \ref{fig:gerlc}) because almost all vertices hold a local clustering coefficient of 0 apart from six vertices. Three of which are the vertices 57, 73 and 66 which corresponds to the words ``könig", ``sich" and ``nicht" respectively. These are not unique words in the German story corpus and no other vertices demonstrate anything unique with its local coefficient. 
+On the other hand, vertices with a high page rank (see Figure \ref{fig:gerpr}) correlate to either conjunctions, vertex 84 (``und"), or words that accompany other words like pronouns or articles, vertices 26 (``ein"), 27 (``eine") etc. Therefore high page rank relates to key words that are used frequently in German, which remains true when extended to the German language as a whole.
 
-In conclusion, similar results were seen when analysing the graphical properties based on the German and English translations. With German having a clearer visualisation and stronger correlation compared to the English language due to having inflections.
+In conclusion, similar results were seen when analysing the graphical properties based on the German and English translations. With German having a clearer visualisation and stronger correlation compared to the English language due the the uniqueness of inflectional words.
 
 \subsection{French}
-English and German are Germanic languages under the Indo-European family. Instead of another similar language, we study a different branch under the same family. The language in question is French which lies under the Italic branch of Indo-European family. Like before with German, French contain the same parts of speech as English and also inflectional words like with German. So words can be inflected by number (singular or plural), gender, person, case, aspect and mood. However whilst German has three genders (Masculine, Feminine and Neutral), French\cite{hawkins2015french} only has the use of two (Masculine and Feminine). 
+English and German are Germanic languages under the Indo-European family. Instead of another Germanic language, we study a different branch under the Indo-European family. The language being French which lies under the Italic branch of the same family. Similarly to German, French contains the same parts of speech as English but also inflectional words. So words can be inflected by number (singular or plural), gender, person, case, aspect and mood. However whilst German has three genders (Masculine, Feminine and Neutral), French \cite{hawkins2015french} only uses two, masculine and feminine. 
 
-The story corpus is translated into the French story corpus so graphs can be generated off this. Where the initial word graphs shown in figure \ref{fig:fregraph}. 
+The story corpus is translated into the French version so graphs can be generated off this. Where the initial word graphs are shown in figure \ref{fig:fregraph}. 
 
 \begin{figure}[H]
 \centering
