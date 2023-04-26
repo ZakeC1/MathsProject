@@ -420,16 +420,16 @@ As discovered in the German analysis, closeness centrality identifies the vertic
 
 Finally the local clustering coefficients and page rank. Only two vertices have a local clustering coefficient of 10 which are vertex 53 ``le" and vertex 76 ``reine" (see Figure \ref{fig:frlc} and Table \ref{table:frenchtablelc}). In the context of French, nothing particular can be derived. However when studying the graphs of local clustering in various languages, the vertices with a local clustering value are never an start or end to a branch.
 
- Page rank values for the French story corpus and measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 "il" has a low page rank value of 1.26 as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be of influence.
+Page ranks for the French story corpus measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 "il" has a low page rank value of 1.26 as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be influential.
 
 In conclusion, French has similar results in comparison to English and German which makes sense as they are a part of the same language family. So to see a different perspective, the study of other language families are undertaken such as the Japonic language family.
 
 \section{Japonic}
-The Japonic language family is the protolanguage for Japanese and Ryūkyūan languages\cite{vovin2017origins} so it is a small language family compared to other language families like the Indo-European family. Translating the corpus into Japanese gives us a new dataset to use for graph property analysis which will be studied in comparison to the previous language family. Japanese translation of the story will be referred to as the Japanese corpus and the same 
+The Japonic language family is the protolanguage for Japanese and Ryūkyūan languages \cite{vovin2017origins} so it is a relatively small language family compared to other language families. Translating the corpus into Japanese gives us a new dataset to use for graph property analysis which will be studied in comparison to the previous language family.
 \subsection{Japanese}
-To give a larger variety of languages, Japanese is studied as it uses vastly different grammar compared to other languages. Japanese has only five lexical word classes which includes nouns, verbal nouns, nominal adjectives, verbs and adjectives. The order in which the words are structured are different to Indo-European languages since Japanese uses SOV (Subject-object-verb) compared to languages like German and English which uses SVO (Subject-verb-object). As well as this, Japanese does not have major reliability on grammatical number or gender and is more focused on their system of honorifics which indicates the speaker, listener or person it references. Therefore, Japanese may have words borrowed from other languages (these are reffered to as loanwords\cite{miura1979influence}) but their grammar is different in comparison. 
+To give a larger variety of languages, Japanese is studied as it uses vastly different grammar compared to the languages seen so far. Japanese has only five lexical word classes which includes nouns, verbal nouns, nominal adjectives, verbs and adjectives. The order in which the words are structured is different to Indo-European languages since Japanese uses SOV (Subject-Object-Verb) compared to languages like German and English which uses SVO (Subject-Verb-Object). Furthermore Japanese does not rely heavily on grammatical number or gender and is more focused on their system of honorifics which indicates the speaker, listener or person of reference. Therefore, even if Japanese contains words borrowed from other languages (these are referred to as \emph{loanwords} \cite{miura1979influence}), their grammar is vastly different. 
 
-We follow the same process as before and input the Japanese Story corpus into my program to produce the basic graphs. For simplicity, we just show the numbered version of the word graph (see Figure \ref{fig:jpgraph}) with the words they reference to in the table of data (See Table ??).
+We follow the same process as before and input the Japanese Story corpus into my program to produce the basic graphs. For simplicity, we show the numbered version of the word graph (see Figure \ref{fig:jpgraph}) with the words they correspond to in the full table of data (See Table \ref{app:}).
 
 \begin{figure}[H]
 \centering
@@ -438,14 +438,14 @@ We follow the same process as before and input the Japanese Story corpus into my
 \label{fig:jpgraph}
 \end{figure}
 
-With previous languages having a largest frequency of nine, with Japanese there are six words with eleven or more appearances (see Table \ref{table:japanesetop}), largest being fourteen for vertex 17. This word is a form of conjugation which means that it's use depends on the inflections of it's associated words. Generally vertex 17 is most commonly used to express the past tense for the phrase in context. So rather than having a separate word for different tenses, Japanese uses accompanying words instead which leads to the higher frequency counts for said words. Furthermore, this is the case for most of the word with a large count like how vertex 12 is used to empathically add more information (an empathic and), vertex 6 is a particle so means "but" or indicated the sentence subject. Therefore, Japanese words has heavy reliability on each other to define their meaning so the graph contains a lot of edges denoting these relationships. We study other properties to see if there is other correlation.
-
 \begin{table}[H]
 \centering
 \includegraphics[scale=1]{japanesetabletop10.png}
 \caption{Top 10 words with the highest frequency in the Japanese translation of the corpus. Shown in table format with other graphical properties. }
 \label{table:japanesetop}
 \end{table}
+
+Out of the previous languages, the larger frequency of a words appearance was 9. With Japanese, there are 6 words with 11 or more appearances (see Table \ref{table:japanesetop}), largest being vertex 17 with 14 appearances. Vertex 17 represents a form of conjugation which means that their use depends on the inflections of it's associated words. Generally vertex 17 is most commonly used to signify the past tense. So rather than having a separate word for different tenses, Japanese uses specific accompanying words which leads to their frequency being significantly higher. Additional examples such as vertex 12 who has a large frequency and its associated word is used to empathically add more information (an empathic and). Vertex 6 is a particle that means ``but" or indicates the sentence subject. Therefore, Japanese words have a heavy reliability on each other to define their overall meaning which is demonstrated by the many edges signifying these relationships.
 
 \begin{table}[H]
 \centering
@@ -465,7 +465,9 @@ With previous languages having a largest frequency of nine, with Japanese there 
 \caption{Partial extracts of the table data for graphical properties of the Japanese Story Corpus.}
 \end{table}
 
-Trophic levels cannot be applied to this dataset like with previous languages. This is due to the graph having bidirectional edges such as the edge between vertex 25 and 5 which is part of the sentence about having only 12 plates. Also vertex 0 contains a self loop which and is part of the word "everyday", the back to back word that creates a different meaning is known as \emph{reduplication}. So there is not a clear hierarchical structure to be inferred to. The largest trophic level is vertex 56 (refers to female) which appears in middle of sentences with the Japanese story corpus. Currently the trophic levels cannot be calculated accurately but can be if the dataset is split into specific group of words depending on it's meaning rather than character by character. For example vertex 59 and 46 means "child" together but is split in the dataset as the program does not recognise characters together as a singular word. However this either requires the full understanding of the Japanese language or heavy cross-referencing and checking. 
+Due to the graph having an increased amount of bidirectional edges such as the edge between vertex 25 and 5. As well as an increased amount of self loops, the trophic incoherence is very high in comparison to previous languages. Thus, the trophic coherence for the Japanese extract is only $0.04$. Caused by the ambiguity of hierarchical structure with bidirectional edges and self loops. An example of a self loop is vertex 0 which is part of the word ``everyday". The subsequent repetition of a word that creates a different meaning is known as \emph{reduplication}.
+
+Unfortunately without a full understanding of the Japanese language, direct analysis of each word is difficult. This is because of the multitude of meanings each word has depending on the context. Therefore, the trophic levels can only provide a generic flow of text from lowest trophic levels (see Table \ref{table:japanesebottc}) as sentence starters to highest levels (see Table \ref{table:japanesetoptc})  as sentence enders.
 
 \begin{table}[H]
 \centering
@@ -497,7 +499,10 @@ Trophic levels cannot be applied to this dataset like with previous languages. T
 	\label{table:japanesetablepr}
 \end{subtable}
 \caption{}
+\label{table:japanesedatar}
 \end{table}
+
+As with previous languages, Tables \ref{table:japanesedatar} (a)-(d) are ordered extracts from the main table in Appendix \ref{app:}.
 
 \begin{figure}[H]
 \centering
@@ -518,11 +523,11 @@ Trophic levels cannot be applied to this dataset like with previous languages. T
 \label{fig:jpcentrality}
 \end{figure}
 
-The graphs in the centrality figure \ref{fig:jpcentrality} shows that the words are more evenly distributed unlike the Indo-European languages. Which correlates to the importance of the Japanese characters nature of being reliant on one another for their meaning and demonstrates the complexities of the language. However higher betweenness still correlates to the character's importance within the corpus where other characters require them to complete their meaning or structure. Although further detailed cannot be determined by the visualisation other than importance.
+The graphs in the centrality Figure \ref{fig:jpcentrality} shows that the words are more evenly distributed unlike the Indo-European languages. Which correlates to the importance of the Japanese characters nature of being reliant on one another for their meaning and demonstrates the complexities of the language visually. The basic correlations from other languages still hold here. Although further detail cannot be determined by the visualisation other than importance.
 
-Japanese's closeness centrality values has a larger average than Indo-European languages. The closeness is a closer look on the betweenness centrality so all vertices in the betweenness graph is essentially shifted right if the vertices have connections to the vertices of high betweenness.
+Japanese's closeness centrality values also has a larger average compared to the Indo-European languages. Instead of looking at the vertices in relation to the whole graph, closeness focusses on the closer clusters. Hence provides a similar shape betweenness but shifted right to emphasise the zooming in on the vertices. There are no vertices that stand out so no correlations can be easily derived.
 
-Therefore only a general correlation can be demonstrated through the centrality graphs. Clearly results can be gathered with a better reword or Japanese fluency.
+Therefore only a general correlation can be demonstrated through the centrality graphs. Clearer results can be gathered with Japanese fluency.
 
 \begin{figure}[H]
 \centering
@@ -543,7 +548,7 @@ Therefore only a general correlation can be demonstrated through the centrality 
 \label{fig:jpother}
 \end{figure}
 
-Local clustering (see the graph in Figure \ref{fig:jplc}) measures how close the vertex is part of a unique directed triangle, i.e. a directed 3 cycle. The vertices 29, 87 and 61 are vertices who are involved in such triangles where they each have a unique in and out edge to other vertices. Lower values means they are not involved in many triangles. Thus local clustering can identify certain triples in the Japanese texts that would have unique meanings. 
+Local clustering (see Figure \ref{fig:jplc}) measures how close the vertex is part of a unique directed triangle, i.e. a directed 3 cycle. The vertices 29, 87 and 61 are vertices who are involved in such triangles where they each have a unique in and out edge to other vertices. Lower values means they are less likely to be involved in unique triangles. Thus local clustering can identify certain triples in the Japanese texts that would have unique meanings. 
 
 Page rank derives the vertices who have an influence to other vertices nearby but not immediate neighbours like what closeness does. However nothing further can be correlated based on this graph (see Figure \ref{fig:jppr}).
 
