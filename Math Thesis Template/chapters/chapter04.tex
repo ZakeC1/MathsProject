@@ -548,21 +548,21 @@ Therefore only a general correlation can be demonstrated through the centrality 
 \label{fig:jpother}
 \end{figure}
 
-Local clustering (see Figure \ref{fig:jplc}) measures how close the vertex is part of a unique directed triangle, i.e. a directed 3 cycle. The vertices 29, 87 and 61 are vertices who are involved in such triangles where they each have a unique in and out edge to other vertices. Lower values means they are less likely to be involved in unique triangles. Thus local clustering can identify certain triples in the Japanese texts that would have unique meanings. 
+Local clustering coefficients (see Figure \ref{fig:jplc}) measures how close the vertex is part of a unique directed triangle, i.e. a directed 3 cycle. The vertices 29, 87 and 61 are vertices who are involved in such triangles where they each have a unique in and out edge to other vertices. Lower values means they are less likely to be involved in unique triangles. Thus local clustering can identify certain triples in the Japanese texts that would have unique meanings. 
 
-Page rank derives the vertices who have an influence to other vertices nearby but not immediate neighbours like what closeness does. However nothing further can be correlated based on this graph (see Figure \ref{fig:jppr}).
+Page rank identifies the vertices who have an influence to other vertices nearby but not immediate neighbours like what closeness does. However nothing further can be correlated based on this graph (see Figure \ref{fig:jppr}).
 
-In conclusion the way the Japanese story corpus is split into the database (character by character), only general correction can be determined based upon the graphs and their properties. Stronger links as to what exact words have importance cannot be obtained here without the full understanding of the language. On the other hand, we see that in general the graphs are different to the ones based on the Indo-European languages which demonstrates their differences. To see this further we analyse another language and it's language family.
+In conclusion the way the Japanese story corpus is split into the database (character by character), only general correlations can be determined based upon the graphs and their properties. Stronger links as to what exact words have importance cannot be obtained here without the full understanding of the language. On the other hand, we see that in general the graphs are different to the ones based on the Indo-European languages which demonstrates the languages differences. To see this further we analyse another language and it's language family.
 
 \section{Sino-Tibetan}
-Sino-Tibetan is the final language family we analyse which contains over 400 languages. The two groups of languages that are successors of this family are Tibeto-Burman language group and Chinese language group. Rather than looking at multiple, we focus on Chinese so translate the story corpus into Chinese then proceed as before. Note that Mandarin Chinese is the 2nd most spoken language after English.
+Sino-Tibetan is the final language family in which we analyse and contains over 400 languages. Two groups of languages that are successors of this family are the Tibeto-Burman language group and Chinese language group. Focus on the Chinese language will be taken to translate the story corpus into. Mandarin Chinese is chosen here since it is the 2nd most spoken language after English.
 
 \subsection{Chinese}
-The main branches of Chinese are Mandarin or Cantonese with mandarin considered the standard and is the official language of China. Mandarin is also the language in which the corpus was translated into but will refer to this as Chinese. Chinese has a SVO (subject-verb-object) sentence structure like with English. It is made up of syllables\cite{ross2017modern} which come with three parts, an initial consonant, the tone, and a final. These three determine what syllable the word is and can be written in Pinyin, which is the standard system for romanised spelling. A simple word like "hello" has Pinyin as "nǐ hǎo" where n and h are initials, i and ao are finals and the accents on the i and a are the tone for the syllables. The tone matches the pitch of the syllable and leads to different meanings for the each word. Although each syllable in Mandarin do have meanings, they are usually combined so that words can be formed. E.g. In Pinyin, "dì" means earth but "dì tú" means map.
+The main branches of Chinese are Mandarin or Cantonese with Mandarin considered to be the standard and is the official language of China. Mandarin is also the language in which the corpus was translated into but will refer to this as Chinese for simplicity. Chinese has a SVO (subject-verb-object) sentence structure like with English. However the language is made up of syllables \cite{ross2017modern} rather than words. Syllables come with 3 parts, an initial consonant, the tone, and a final. These parts determines the meaning to each syllable and instead of writing their unique characters, they can be written using Pinyin. Pinyin is the standard system for romanised spelling and a useful tool in learning Chinese and their pronunciations. A simple word like ``hello" is ``nǐ hǎo" in Pinyin where ``n" and ``h" are initials, ``i" and ``ao" are finals and the accents on the letters ``i" and ``a" are the tone for the syllables. The tone matches the pitch of the syllable and leads to different meanings for the each word. Although each syllable in Chinese has its own definitions, they can be combined to form a different word. E.g. In Pinyin, ``dì" means earth but "dì tú" means map.
 
-Similarly to Japanese, Chinese has very few inflections and use other particles which accompany the syllable to express verbal aspect. Another similarity is the use of reduplication where a syllable is repeated to give a different meaning. Parts of speech for Chinese is split into two major categories, the function words and the content words. The function words contains nouns, pronouns, verbs, auxiliary verbs, adjectives, number words, measure words, interjections and onomatopoeias. Function words contain conjunctions, prepositions and particles. Furthermore, each subgroup mentioned can also have further branches dependent on the context it is used on. For example, for nouns, there can be proper nouns, location nouns, place nouns and time nouns.
+Similarly to Japanese, Chinese has very few inflectional characters and utilises other particles to accompany the syllables so various verbal aspects can be expressed. Another similarity is the use of reduplication where a syllable is repeated to give a different meaning. Parts of speech for Chinese is split into two major categories, the \emph{function} words and the \emph{content} words. The function words contains nouns, pronouns, verbs, auxiliary verbs, adjectives, number words, measure words, interjections and onomatopoeias. Function words contain conjunctions, prepositions and particles. Furthermore, each subgroup mentioned can have further branches dependent on the context that they are used in. For example, nouns can be proper nouns, location nouns, place nouns and time nouns in the Chinese language.
 
-Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also there is a reliability factor given the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with the Chinese Story Corpus's word graph seen in figure \ref{cngraph} (shown with numerical values which references each word in Table ??).
+Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also syllables have a reliability factor and depends on the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with seeing the basic word graph generated for the Chinese translation of the story corpus, seen in Figure \ref{cngraph} (shown with integer labelling to reference each word of the entire table, Table ?? in the Appendix).
 
 \begin{figure}[H]
 \centering
@@ -571,14 +571,14 @@ Therefore Chinese contains a larger amount of unique syllables compared to the w
 \label{fig:cngraph}
 \end{figure}
 
-The syllable with the higher count (see Table \ref{table:chinesetop}) is vertex 90 which is "de" in Pinyin. This is a particle so has a grammatical meaning and different functions to denote possession or to be accompanied by other parts of speech. Other syllables with high count include vertex 71, "yǒu", vertex 5, "gè" and vertex 0, "yī". These al have various meanings depending on their use, vertex 71 can mean "have", "is" and "are", vertex 5 can mean "this", "that", party of a size or a classifier for people/objects and vertex 0 can mean "a" or part of a number. Therefore the syllables with a high count represents the words who have the most meanings and important in the sentence structure or gender related words such as vertex 15 or 43.
-
 \begin{table}[H]
 \centering
 \includegraphics[scale=1]{chinesetabletop10.png}
 \caption{Top 10 words with the highest frequency in the Chinese translation of the corpus. Shown in table format with other graphical properties. }
 \label{table:chinesetop}
 \end{table}
+
+The syllables with the highest count (see Table \ref{table:chinesetop}) is vertex 90 which is ``de" in Pinyin. This is a particle so has a grammatical meaning with different functions to denote possession. Also can be accompanied by other parts of speech. Other syllables with high counts include vertex 71, ``yǒu", vertex 5, ``gè" and vertex 0, ``yī". These vertices all have various meanings depending on their use, ``yǒu" can mean ``have", ``is" and ``are", ``gè" can mean ``this", ``that", the party of a specific size or a classifier for people or objects. Vertex 0, ``yī", can mean ``a" or is a part of a number like ``1" in the English language. Therefore the syllables with a high count represents the words of varied meanings which are important in the sentence structure or identifiers for words with different genders.
 
 \begin{table}[H]
 \centering
@@ -598,7 +598,7 @@ The syllable with the higher count (see Table \ref{table:chinesetop}) is vertex 
 \caption{Partial extracts of the table data for graphical properties of the Chinese Story Corpus.}
 \end{table}
 
-Due to bi direction edges and reduplication of syllable usage, clear hierarchical representation cannot be obtained but trophic levels are useful to give a distribution of the data based on their positioning. Thus if there are paths that continually traverse downwards, then are grammatically correct, otherwise it means that some syllables are used in various other contexts which shifts it's value. For example, the path from vertex 57 to vertex 61 which can be seen in the Chinese betweenness graph in Figure \ref{fig:cnbc}. 
+An increased amount of reduplications and bidirectional edges appear in the Chinese graph. Like before with the Japanese data, trophic levels do not demonstrate a clear visual hierarchy. Meaning that the trophic coherence is low and is calculated to be $0.09$ based on the Chinese translation of the story corpus. Therefore average positions of each syllable within a sentence can still be represented but with minor flexibility. The trophic levels go from low to high in relation to the sentence flow with Table \ref{table:chinesetoptc} showing the top 10 syllables nearer the start of a sentence and Table \ref{table:chinesebottc} showing the top 10 syllables for the end. Grammatically correct can be seen by unique downward paths in the graph visualisations such as the path from vertex 19 to vertex 61 (see Figure \ref{fig:cncentrality} or \ref{fig:cnother}).
 
 \begin{table}[H]
 \centering
@@ -632,6 +632,8 @@ Due to bi direction edges and reduplication of syllable usage, clear hierarchica
 \caption{}
 \end{table}
 
+The top 10 syllables for each complex graph property is seen here where the full table is in Appendix \ref{app:}.
+
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
@@ -651,11 +653,9 @@ Due to bi direction edges and reduplication of syllable usage, clear hierarchica
 \label{fig:cncentrality}
 \end{figure}
 
-Betweenness in the Chinese Story corpus (see figure \ref{fig:cnbc}) are the syllables are shown to represent the particles of vertex 90 and vertex 10. Reiterating the fact that they are the syllables that act most like bridges and needed to derive further meaning. Hence betweenness relate closely to the counts of the syllables discussed earlier.
+Betweenness centrality in the Chinese translation Story corpus (see figure \ref{fig:cnbc}) identified the syllables vertex 90 and vertex 10 (both are particles) to be of high importance. Re-emphasizing the fact that they are the syllables that act most like bridges and needed to derive further meaning. Hence betweenness relate closely to the counts of the syllables discussed earlier. The same correlation is achieved in previously discussed languages so we can conclude that this correlation of importance holds for the majority of languages.
 
-Similarly mentioned in the German analysis, closeness measures the importance of words immaterially surrounded them. Which means the vertices that are most likely to isolate further vertices in it's path, i.e. they are the vertices vital in it's path structure (controls the flow of data). Therefore, demonstrated by Figure \ref{fig:cncentrality}, vertex 98 has highest closeness as without this vertex, vertex 61 is isolated. Subsequently the predecessors of vertex 98 have higher closeness. However there are no other vertices with high closeness since most other syllables have a lot more unique connections to various other vertices which infers that they have multiple meanings rather than the uniqueness of vertex 98's portion of the path.
-
-
+As mentioned in the German analysis, closeness measures the importance of words directly around them. In other words, the vertices vital in the paths structure (controlling the flow of data). Therefore, demonstrated by Figure \ref{fig:cncentrality}, vertex 98 has the highest closeness as without this vertex, vertex 61 is isolated. Subsequently the predecessors of vertex 98 have higher closeness. However there are no other vertices with high closeness since other syllables hold connections to various unique vertices. Thus inferring that these syllables of high degree have multiple meanings rather than the unique meaning of vertex 98s section of the path.
 
 \begin{figure}[H]
 \centering
@@ -673,10 +673,10 @@ Similarly mentioned in the German analysis, closeness measures the importance of
 	\label{fig:cnpr}
 \end{subfigure}
 \caption{Displays the local clustering and page rank on the x-axis instead of the centrality values.}
-\label{fig:jpother}
+\label{fig:cnother}
 \end{figure}
 
-Local clustering identifies vertices involved in unique directed 3-cycles. The same idea was discovered when analysing the Japanese story corpus. For example, vertex 22 is uniquely part of the directed 3-cycle, vertex 0 -> 22 -> 71 -> 0 where vertex 22 is seen as the top because vertices 22 and 71 are involved with other vertices. Similarly how vertex 94 is involved in it's own directed 3-cycle. So local clustering does not identify the vertices of high importance but rather certain triples within the corpus. 
+By taking what we found in the Japanese graphs, we now know that the local clustering coefficient identifies vertices involved in unique directed 3-cycles. For example, vertex 22 is uniquely part of the directed 3-cycle, vertex 0 $\rightarrow$ 22 $\rightarrow$ 71 $\rightarrow$ 0 where vertex 22 is seen as the pinnacle of the cycle because vertices 22 and 71 hold other edge connections within the graph seen in Figure \ref{fig:cnlc}. The same applies to vertex 94 as it is involved in its own directed 3-cycle. So local clustering does not identify the vertices of high importance but rather certain triples within the corpus.
 
-The page rank identifies the vertices with influence to vertices other than their immediate neighbours.  Evidently vertices with high betweenness will also have a high page rank as they are more commonly used in the corpus. 
+The page rank (see Figure \ref{fig:cnpr}) identifies the vertices with influence to vertices other than their immediate neighbours. Evidently vertices with high betweenness will also have a high page rank as they are more commonly used in the corpus. Similar results have been seen with other languages for page ranks so evidently, page rank and betweenness values are close in the context of lexical analysis.
 
