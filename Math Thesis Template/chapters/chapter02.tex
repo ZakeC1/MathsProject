@@ -261,22 +261,24 @@ where $i \ne j$. This is the calculation is for simply connected graphs however 
 Therefore by taking these properties, the graph can be rearranged in accordance to their centrality values. This is accomplished by having their property values as their position vector and is done so similarly in the paper by Juan, Alvarez, Villasante and Ruiz-Frau \cite{de2021graph}. In which they relabelled graphs with their normalised centrality values. This ranges from the betweenness centrality to eigenvector centrality. Thus a similar idea can be applied along with the other properties explained and studied in this chapter.
 
 \section{Webpages}
-One of the largest graphs in the modern world is the network of web-pages, especially Google's search engine. To help navigate through the vast quantity of pages, Brin and Page \cite{brin1998anatomy} developed an algorithm known as the Page Rank algorithm. The Page rank gives a quantified meaning to the importance of the webpages and their links to other web-pages. Additionally the Page Rank is known as a centrality value which was discussed briefly in the last section along with the Hyperlink-Induced Topic Search (HITS) which was also created with a similar goal to Page Rank. Both these values are based upon digraphs (directed graphs) and was generated to help with the navigation of the world wide web and provide users with the highest quality webpages that were also most relevant to their search criteria.
+One of the largest graphs in the modern world is the network of webpages, especially Google's search engine. To help navigate through the vast quantity of pages, Brin and Page \cite{brin1998anatomy} developed an algorithm known as the Page Rank algorithm. The Page rank gives a quantified meaning to the importance of the webpages and their links to other webpages. Additionally the page rank is known as a centrality value which was discussed briefly in the last section along with the Hyperlink-Induced Topic Search (HITS) which was also created with a similar goal to page rank. Both of these values are based upon digraphs (directed graphs) and was generated to help with the navigation of the world wide web. The algorithms provided users with the highest quality webpages that were also most relevant to their search criteria. The idea of finding the most relevant page can be translated to finding the most relevant word within a sentence. So we can transfer the values generated for page rank or HITS onto our word graphs later on. In doing so, words of relevance can be found.
+
+In addition to the centrality property, which we use later, we identify a couple web page algorithms and deduce the main one that will be used during lexical analysis. These will either be the HITS algorithm or Page Rank algorithm.
 
 \subsection{Hyperlink-Induced Topic Search}
-HITS calculate the ranks of \emph{authorities} and \emph{hubs} in relation to their in-links and out-links \cite{langville2005survey}, i.e. the edges pointing in and the edges going out of the vertices in the graph/network.  Authorities and Hubs are assigned to webpages(vertices) depending on their number of in-links and out-links. For the HITS algorithm, the webpages who has lots of in-links pointing to it are denoted as authorities and the webpages who has lots of out-links pointing to other webpages are denoted as the hubs. These can be identified through the use of the HITS algorithm as the calculations are an iterative process where it enforces the authorities and hubs by bringing the authorities to the surface of the graph. Thus isolating them from other the other webpages. This is achieved by generating the hub and authority values by mutual reinforcement. Based on vertices $i \in V$ from a graph of webpages $G = (V , E)$, the hub value $h_i$ and authority value $a_i$ are first set to a value of 1. Then by Kleinberg's HITS algorithm, they are updates iteratively through the formulas:
+HITS algorithm calculates the ranks of \emph{authorities} and \emph{hubs} in relation to their in-links and out-links \cite{langville2005survey}. In other words, the edges pointing into vertices and the edges pointing out of the vertices in the graph/network.  Authorities and Hubs are assigned to webpages (vertices) depending on their number of in-links and out-links. For the HITS algorithm, the webpages that has lots of in-links pointing to it are denoted as authorities and the webpages that has lots of out-links pointing to other webpages are denoted as the hubs. These can be identified through the use of the HITS algorithm as the calculations are an iterative process. The iterative process enforces the authorities and hubs by bringing the authorities to the surface of the graph. Thus isolating them from the other webpages. This is achieved by generating the hub and authority values through mutual reinforcement. Based on vertices $i \in V$ from a graph of webpages $G = (V , E)$, the hub value $h_i$ and authority value $a_i$ are first set to a value of 1. This is so that they are indistinguishable and will later be relabelled if necessary. Then by Kleinberg's HITS algorithm, they are updated iteratively through the formulas:
 
 \begin{equation}
-a_i^(k) = \sum_{j:j->i \& j \ne i}h_j^{(k-1)} , \qquad \qquad h_i^(k) = \sum_{j:i \rightarrow j \& j \ne i}a_j^{(k)}
+a_i^{(k)} = \sum_{j:j\rightarrow i \text{ \& } j \ne i}h_j^{(k-1)} , \qquad \qquad h_i^{(k)} = \sum_{j:i \rightarrow j \text{ \& } j \ne i}a_j^{(k)}
 \end{equation}
 
-where $j$ are denoted as the links from and to the webpages. The $k$ depicts the $k^{\text{th}}$ iteration of the algorithm, so the authority values depend on the previous iteration of hub values and the hubs are calculated based on the current authority values. Which gives the mutual reinforcement of both values. As the graph $G$ can be represented by an adjacency matrix $A = [a_{ij}]$, the formulas can be expressed through matrices \cite{chatzigeorgiou2006application} and vectors instead as:
+where $j$ is denoted as the links from and to the webpages of $i$ and $j$. The $k$ depicts the $k^{\text{th}}$ iteration of the algorithm, so the authority values depend on the previous iteration of hub values and the hubs are calculated based on the current $k^{\text{th}}$ authority values. Which gives the mutual reinforcement of both values. As the graph $G$ can be represented by an adjacency matrix $A = [a_{ij}]$, the formulas can be expressed through matrices \cite{chatzigeorgiou2006application} and vectors instead as shown by Equation \ref{eq:hitsah}.
 
-\begin{equation}
+\begin{equation}\label{eq:hitsah}
 \bold{a}^{(k)} = \bold{A}^{T}\bold{h}^{(k-1)} , \qquad \qquad \bold{h}^{(k)} = \bold{A}^{T}\bold{a}^{(k)}
 \end{equation}
 
-where the hub and authority values are adapted into vectors $\bold{a}^{(k)}$ and $\bold{h}^{(k)}$. The vectors are shown as
+where the hub and authority values are adapted into vectors $\bold{a}^{(k)}$ and $\bold{h}^{(k)}$. The vectors are expanded and shown as
 
 \begin{equation}
 \bold{a}^{(k)} = \begin{bmatrix}
@@ -296,8 +298,8 @@ where the hub and authority values are adapted into vectors $\bold{a}^{(k)}$ and
 
 Thus accomplishing the goals of generating the values which depict the hubs and authorities more clearly within the graph. Although this algorithm is currently defined only for directed weightless graphs so we extend the algorithm to include a weighted edge version.
 
-\subsubsection{Normalisation and weights}
-As the number of iterations increases, the values generated may increase. This means that at some point, the values will become too large to be used for any calculations so they can be normalised such that this does not occur. After $k$ iterations, the normalised formulas are demonstrated by Equations (\ref{eq:nhits}) and the general outline for the HITs algorithm is demonstrated by Agosti and Pretto\cite{agosti2005theoretical} as the following:
+As the number of iterations increases, the values generated may increase. This means that at some point, the values will become too large to be used for any calculations. So in order to mitigate this problem, the values can be normalised which prevents the issue of tending to infinity. After $k$ iterations, the normalised formulas are demonstrated by Equations \ref{eq:nhits} with the inclusion of weights. The general outline for the HITS algorithm is demonstrated by Agosti and Pretto \cite{agosti2005theoretical} as the following:
+\newline
 
 \begin{algorithmic}
 \State $\bold{a}^{(0)} := \bold{u}$ ,   $\bold{h}^{(0)} := \bold{u}$;
@@ -308,9 +310,10 @@ As the number of iterations increases, the values generated may increase. This m
 		 \State \qquad normalise $\bold{h}^{(k)}$ such that $\norm{\bold{h}^{(k)}} = 1$;
 \EndFor 
 \State $\bold{a} := \bold{a}^{(K)}$ ,   $\bold{h} := \bold{h}^{(K)}$;
+\newline
 \end{algorithmic}
 
-where $K$ denotes the maximum number of iterations and $\bold{u}$ be the vector for the first iteration of hub and authority values, also known as the base case. The base case for $\bold{u}$ will just be the vector of ones known as $\bold{1}$ or $\bold{e}$ in linear algebra. So then the normalised values after $k$ iterations is given as follows:
+where $K$ denotes the maximum number of iterations and $\bold{u}$ as the vector for the first iteration of hub and authority values, also known as the base case. The base case for $\bold{u}$ will just be the vector of 1s known as $\bold{1}$ or $\bold{e}$ in linear algebra. So then the normalised values after $k$ iterations is given as follows:
 
 \begin{equation} \label{eq:nhits}
 \bold{a}^{(k)} = (\bold{A}^{T}\bold{A})^{k-1}\bold{A}^{T}\bold{u} , \qquad \qquad \bold{h}^{(k)} = (\bold{A}\bold{A}^{T})^{k}\bold{u}
@@ -322,31 +325,33 @@ To incorporate weights of the edges into the algorithm, the weighted matrix $W$ 
 \bold{a}^{(k)} = (\bold{W}^{T}\bold{W})^{k-1}\bold{W}^{T}\bold{u} , \qquad \qquad \bold{h}^{(k)} = (\bold{W}\bold{W}^{T})^{k}\bold{u}
 \end{equation}
 
+Concluding the study on the HITS algorithm, we now proceed with the Page Rank algorithm which is more commonly known and used.
+
 \subsection{Page Rank}
-A widely known algorithm that contributes to the internet of navigation within Google is the Page Rank. The Page Ranks are needed because many different search queries can be entered onto the search engine to produce lots of results that contain the same or similar words to the search enquiry so a method to help organise or prioritise is necessary. The Page Rank is used to rank the web-pages according to the amount of backlinks a page may have and the number citations that reference a particular page. An example of a webpages and links as a graph is shown in Figure \ref{fig:page} with their page ranks displayed.
+A widely known algorithm that contributes to the internet of navigation within Google is the Page Rank. The page ranks are needed because many different search queries can be entered onto the search engine. These queries produce lots of results that contain the same or similar words to what was searched. Consequently, a method to help organise and prioritise the results is necessary. The page rank is used to rank the webpages according to the amount of backlinks a page may have and the number citations that reference a particular page. An example of webpages and links in the form of a graph is shown in Figure \ref{fig:page} with their page ranks displayed. The Page Rank algorithm can also be compared to the HITS algorithm to see the benefits of either. This is explored in the paper by Devi, Gupta and Dixit \cite{devi2014comparative}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=.9\linewidth]{pagegraph.png}
-	\caption{A graph representation of webpages and their in and out links. Algorithms such as Page Rank and HITS uses this graph format to help demonstrate their calculations. This image was sourced from the paper by Devi, Gupta and Dixit \cite{devi2014comparative} whom describes and compares Page Rank algorithm to the HITS algorithm.}
+	\caption{A graph representation of webpages and their in and out-links. Algorithms such as Page Rank and HITS uses this graph format to help demonstrate their calculations.}
 	\label{fig:page}
 \end{figure}
 
-For the graph $G = (V, E)$ the webpages can be seen as vertices$v \in V$ with their links as the edges directed edges between pages, the same way to how they were represented in the HITS formulas. We can let $F_v$ be the set of webpages that $v$ points to, i.e. the forward links. Similarly the backwards links as $B_v$ which is the set of webpages that points to $v$. The simplified version of Page Rank \cite{page1999pagerank} can then be defined with $N_v = \left|F_v\right|$ as the following:
+For the graph $G = (V, E)$ the webpages can be seen as vertices $v \in V$ with their links as the directed edges between pages, the same way to how they were represented in the HITS formulas. We can let $F_v$ be the set of webpages that $v$ points to, i.e., the forward links. Similarly the backwards links as $B_v$ which is the set of webpages that points to $v$. The simplified version of Page Rank \cite{page1999pagerank} can then be defined with $N_v = \left|F_v\right|$ in Equation \ref{eq:prb}.
 
-\begin{equation}
+\begin{equation}\label{eq:prb}
 PR(v) = c\sum_{w \in B_v}\frac{PR(w)}{N_w}
 \end{equation}
 
-where c is a variable used for normalisation purposes so can be modified accordingly. So Page Rank is calculated by the even distribution of the Page Rank for webpage $v$ among webpages that $v$ points to. The values that links to other webpages from $v$ are then used to calculate their Page Rank. Hence giving an iterative approach to Page Rank as the algorithm travels along the links of the webpages. However if a webpage does not have out-links and only in-links from other webpages then their Page Rank is never distributed to others causing its value to accumulate. This situation is known as a \emph{rank sink}.
+where c is a variable used for normalisation purposes so can be modified accordingly. So the page rank is calculated by the even distribution of the page rank for webpage $v$ among webpages that $v$ points to. The page ranks that links to other webpages from $v$ are then used to calculate their page rank. Hence giving an iterative approach to calculating their ranks whilst the algorithm travels along the links of the webpages. However if a webpage does not have out-links and only in-links from other webpages then their rank is never distributed to others causing its value to accumulate. This situation is known as a \emph{rank sink}.
 
-A remedy to having a rank sink is to use a a damping factor to illustrate the probability that the user follows the links on the webpage. This takes into the consideration that users could skip pages or go directly to another webpage that was not linked through the URL. Hence ($1-d$) is considered as the distribution of the Page Rank from webpages that was not directly linked to it, i.e. no direct edges between them. Thus for the page $v$ with $b_i \in B_v$, the Page Rank \cite{brin1998anatomy} is defined through Equation \ref{eq:pr}.
+A remedy to having a rank sink is to use a a damping factor to illustrate the probability that the user follows the links on the webpage. This takes into the consideration that users could skip pages or go directly to another webpage that was not linked through the URL. Hence ($1-d$) is considered as the distribution of the page rank from webpages that was not directly linked to it, i.e., no direct edges between them. Thus for the page $v$ with $b_i \in B_v$, the page rank \cite{brin1998anatomy} is defined through Equation \ref{eq:pr}.
 
 \begin{equation} \label{eq:pr}
 PR(v) = (1-d) + d (PR(b_1)/F(b_1) + … + PR(b_n)/F(b_n))
 \end{equation}
 
-where F(v) was retrieved from the set $F_v$ for webpage $v$. Page Rank is applied to each page and it is repeated on further pages until the equation converges. The damping factor adds randomness into the network of webpages so that the rank sink does not occur and ensures the convergence is not reached too quickly. Usually the damping factor is taken to be 0.85. 
+where $F(v)$ was retrieved from the set $F_v$ for the webpage $v$. Page rank is applied to each page and is repeated on further pages until the equation converges. The damping factor adds randomness into the network of webpages so that the rank sink does not occur and ensures the convergence is not reached too quickly. Usually the damping factor is taken to be $0.85$. 
 
 By using summation, the Page Rank formula can be simply reduced to
 
@@ -354,34 +359,33 @@ By using summation, the Page Rank formula can be simply reduced to
 PR(v) = (1 - d) + d\sum_{w \in B_v}\frac{PR(w)}{N_w}
 \end{equation}
 
-\subsubsection{Personlisation}
-The algorithm for Page Rank can be modified depending on the use and aims. Such modifications include adjusting the vertex and edge values, modifying the damping factor or to introduce a new variable into the algorithm. An example of a personalisation is the Weighted Page Rank \cite{xing2004weighted} where larger values are assigned to more popular/important webpages rather than the even distribution that occurred beforehand. Webpages that are out-linked will instead receive a value proportional to the pages popularity which are based off of their number of in links and out links. These popularity values of the in links and out-links are represented as $W^{in}_{v,w}$ and $W^{out}_{v,w}$ accordingly. So $W^{in}_{v,w}$ is calculated by the inlinks of webpage $v$ shown to be $I_v$ and the inlinks of all the webpages that the webpage $w$ references, call this set of pages $R(w)$, as $I_p$ where $p \in R(w)$. This can then be formularised into the equation
+The algorithm for calculating page rank can be modified depending on the use and aims. Such modifications include adjusting the vertex and edge values, modifying the damping factor or introducing a new variable into the algorithm. These such changes are known as \emph{personalisation} and an example of a personalisation is the Weighted Page Rank \cite{xing2004weighted}. Which is where larger values are assigned to more popular or important webpages rather than the even distribution that occurred beforehand. Webpages that are out-linked will instead receive a value proportional to the page's popularity. Their popularity is based off of the number of in-links and out-links they hold. These popularity values of the in-links and out-links are represented by $W^{in}_{v,w}$ and $W^{out}_{v,w}$ respectively. So $W^{in}_{v,w}$ is calculated by the in-links of webpage $v$, shown to be $I_v$, and the in-links of all the webpages that the webpage $w$ references. Which is represented as a set and we call this set of pages $R(w)$ with $I_p$ where $p \in R(w)$. Furthermore with these changes, $W^{in}_{v,w}$ and $W^{out}_{v,w}$ can then be formularised into Equations \ref{eq:prwin} and \ref{eq:prout} respectively.
 
-\begin{equation}
+\begin{equation}\label{eq:prwin}
 W^{in}_{v,w} = \frac{I_v}{\sum_{p \in R(w)}}{I_p}
 \end{equation}
 
-Similarly, the same can be done for the out-links 
-
-\begin{equation}
+\begin{equation}\label{eq:prout}
 W^{out}_{v,w} = \frac{O_v}{\sum_{p \in R(w)}}{O_p}
 \end{equation}
 
-Where $O_v$, $O_p$ is defined the same as the in-links previously but with the use of the out-links as replacement. Therefore, the Page Rank formula can be modified to include the webpages importance giving the formula
+where $O_v$, $O_p$ is defined the same as the in-links previously but with the use of the out-links as a replacement. Therefore, the Page Rank formula can be modified to include the webpage's importance giving us the Equation \ref{eq:proverall}.
 
-\begin{equation}
+\begin{equation}\label{eq:proverall}
 PR(v) = (1 - d) + d\sum_{w \in B_v}PR(w)W^{in}_{v,w}W^{out}_{v,w}
 \end{equation}
 
-So, this formula is focussed more upon the webpages that are visited more frequently by users and ensures they end up with a higher Page Rank. 
+So, this formula is focussed more upon the webpages that are visited more frequently by users and ensures they end up with a higher rank. 
 
-However, for the purpose of general directed weighted graphs, the edge weights are lost in the formula as the algorithm updates the Page Rank of every vertex in each iteration meaning that the weights can be disregarded and replaced with the Page Ranks instead. To ensure this does not happen, the weights of all the edges must be included in the ranks calculation. This is accomplished by summing up the weight values of the in and out edges and incorporating it into the formula as achieved by Equation \ref{eq:wpr}.
+However, for the purpose of general directed weighted graphs, the edge weights are lost in the formula as the algorithm updates the rank of every vertex in each iteration meaning that the weights can be disregarded and replaced with the page ranks instead. To ensure this does not happen, the weights of all the edges must be included in the ranks calculation. This is accomplished by summing up the weight values of the in and out edges and incorporating it into the formula as achieved by Equation \ref{eq:wpr}.
 
 \begin{equation} \label{eq:wpr}
 PR(v) = (1-d) + d\sum_{w \in B_v}\frac{PR(w)w_{(w \rightarrow v)}}{N_w}
 \end{equation}
 
-where $N_w = \sum_y{A_{w,y}w_(w -> y)}$ is redefined as the sum of weights of the out linked edges in relation to vertex $w$.
+where $N_w = \sum_y{A_{w,y}w_{(w \rightarrow y)}}$ is redefined as the sum of weights of the out-linked edges in relation to vertex $w$.
 \\
 
-Whilst HITs and Page Ranks are designed for the search engine, the network of web-pages essentially is a large directed graph that can contain weights hence why the Page Rank can be used on any derivatives of a weighted directed graph. Thus, there are additional graphical property that can be used to help analyse the structure and linkage of a graph. 
+Whilst HITS and Page Ranks are designed for the search engine, the network of webpages essentially is a large directed graph that can contain weights hence why the Page Rank can be used on any derivatives of a weighted directed graph. Thus, they are additional graphical property that can be used to help analyse the structure and linkage of a graph. 
+
+In conclusion, we take the page rank formulas into the experimentations of lexical analysis. This is because we do not have the requirements of hubs and authorities as shown in the HITS algorithm so we use the page ranks for directed graphs in future. In addition to the page ranks, we will incorporate the use of local clustering coefficient, trophic levels and the betweenness centrality so that various different graph visualisations can be produced. Before applying these to lexical data, we begin with initial experimentations on a smaller dataset shown in the next chapter. This is to ensure that the visualisations works and to implement any modifications that may be required. Also gives us further insight as to what various values represent in a different dataset.
