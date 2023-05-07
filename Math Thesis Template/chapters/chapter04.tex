@@ -12,10 +12,10 @@ The best way in comparing the results to other languages is to have datasets bas
 \begin{quote}
 ``In times past there lived a king and queen, who said to each other every day of their lives, ``Would that we had a child!" and yet they had none. \dots There were thirteen of them in his kingdom, but as he had only provided twelve golden plates for them to eat from, one of them had to be left out."
 \end{quote}
-In conclusion the 9 datasets are created based on this text extract for graph property calculations. In the next section, the study of Indo-European languages will be undertaken, beginning with English.
+In conclusion the nine datasets are created based on this text extract for graph property calculations. In the next section, the study of Indo-European languages will be undertaken, beginning with English.
 
 \section{Indo-European Language Family}
-Five languages of the Indo-European language family were analysed but detailed analysis of English, German and French will be given in this section. Throughout the analysis, words are referred to as vertices and vice versa. The two paragraph extract of "Sleeping Beauty" will simply be referred to as the story corpus of its relative language. Edges of the generated graph will represents the connections to the subsequent word in the story corpus. 
+Five languages of the Indo-European language family were analysed but detailed analysis of English, German and French will be given in this section. Throughout the analysis, words are referred to as vertices and vice versa. The two paragraph extract of ``Sleeping Beauty" will simply be referred to as the story corpus of its relative language. Edges of the generated graph will represents the connections to the subsequent word in the story corpus. Note that all graphs and tables can be seen in full within the Appendix.
 
 Before the analysis can be undertaken, a brief summary of the languages structure and grammar is given. This is to ensure the increased understanding of correlations and results achieved through this process.
 
@@ -47,7 +47,7 @@ As done in the Early Experimentations of the karate club dataset, we calculate t
 \label{table:englishtop}
 \end{table}
 
-We begin by analysing words with the most recurrences (see Table \ref{table:englishtop}). In the order of most frequent to least, the words are ``and'', ``the", ``a", ``to", ``had", ``he", ``of", ``that", ``be" and ``but". Note that nouns, adverbs and adjectives do not appear in the most frequent words. These are the words that are deemed more vital in the creation of structure within a sentence of the story corpus. Any sentence in ``Sleeping Beauty" will have a high chance of containing at least one of these words. Since this is only a portion of a dataset, we can compare these words to a larger dataset to see whether or not the importance of these words remain same. Word frequencies follow the Zipf curve for languages, as discussed in the previous section, so we can take another corpus to compare its frequency of words to ours. We choose to compare the story corpus to the British National Corpus (BNC) \cite{bnc2007british} which is a 100 million word collection that includes both written and spoken English language. The benefits in choosing BNC is that it contains older English so may provide clearer correlations to the story of ``Sleeping Beauty" (the Brothers Grimm version began in the late 18th century). So for the BNC, the top ten words \cite{leech2014word} in order of frequencies are ``the", ``of", ``and", ``a", ``in", ``to", ``it", ``is", ``to" and ``was". Comparing the most frequent words in both corpora, correlations are achieved such as the repetitions of words ``the", ``to", etc. Such similarities reinforce the fact that the English language has a structured form that requires the use of these such words, as demonstrated with a much smaller corpus compared to the the BNC.
+We begin by analysing words with the most recurrences. In the order of most frequent to least, the words are ``and'', ``the", ``a", ``to", ``had", ``he", ``of", ``that", ``be" and ``but". Note that nouns, adverbs and adjectives do not appear in the most frequent words. These are the words that are deemed more vital in the creation of structure within a sentence of the story corpus. Any sentence in ``Sleeping Beauty" will have a high chance of containing at least one of these words. Since this is only a portion of a dataset, we can compare these words to a larger dataset to see whether or not the importance of these words remain same. Word frequencies follow the Zipf curve for languages, as discussed in the previous section, so we can take another corpus to compare its frequency of words to ours. We choose to compare the story corpus to the British National Corpus (BNC) \cite{bnc2007british} which is a 100 million word collection that includes both written and spoken English language. The benefits in choosing BNC is that it contains older English so may provide clearer correlations to the story of ``Sleeping Beauty" (the Brothers Grimm version began in the late 18th century). So for the BNC, the top ten words \cite{leech2014word} in order of frequencies are ``the", ``of", ``and", ``a", ``in", ``to", ``it", ``is", ``to" and ``was". Comparing the most frequent words in both corpora, correlations are achieved such as the repetitions of words ``the", ``to", etc. Such similarities reinforce the fact that the English language has a structured form that requires the use of these such words, as demonstrated with a much smaller corpus compared to the the BNC.
 
 \begin{table}[!htb]
 \centering
@@ -67,7 +67,7 @@ We begin by analysing words with the most recurrences (see Table \ref{table:engl
 \caption{Partial extracts of the table data ordered by their trophic levels. (a) top 10 words and (b) bottom 10 words ranked by their trophic levels based on the English story Corpus.}
 \end{table}
 
-Now onto the analysis of Trophic levels and coherence (see Tables \ref{table:englishtoptc} and \ref{table:englishbottc}). When applying trophic level calculations on directed word graphs, the levels represent the positioning of the word within its relative sentence. Similarly shown in the analysis of network data in empirically-derived directed networks \cite{johnson2017looplessness}. For the ``Sleeping Beauty" English word graph, the lower trophic levels denotes the vertices most likely to be sentence starters and the higher levels denote the sentence enders. This is supported by the data because the top six words with largest trophic levels values (ranging from $10.00-4.77$) are all sentence enders or accompanied a sentence ender (vertex 34). Along with the bottom five being words (trophic values ranging from $0.00-0.86$) nearer the start of sentences such as ``there" and ``times" in relation to the corpus. However trophic incoherence is calculated to be $0.91$ which means that the levels in the graph can not be distinguished and are not clear. Since the $\text{trophic coherence} = 1 - \text{trophic incoherence} = 0.09$ which is due to the fact of the vast difference of sentence lengths in the corpus. Which varies from the shortest sentence of five words and the longest of forty seven words. Consequently in relation to the extract used, a clear hierarchical layout may not be provided but there remains a good layout for sentence flow. Demonstrated by further graphs with the trophic levels as the $y$-axis ranging from 0 to 10 downwards to provide a normal cascade of words. Then the $x$-axis ranging from 0 to 10 from left to right which will be based on other graphical properties.
+Now onto the analysis of Trophic levels and coherence (see Tables \ref{table:englishtoptc} and \ref{table:englishbottc}). When applying trophic level calculations on directed word graphs, the levels represent the positioning of the word within its relative sentence. Similarly shown in the analysis of network data in empirically-derived directed networks \cite{johnson2017looplessness}. For the ``Sleeping Beauty" English word graph, the lower trophic levels denotes the vertices most likely to be sentence starters and the higher levels denote the sentence enders. This is supported by the data because the top six words with largest trophic levels values (ranging from $10.00-4.77$) are all sentence enders or accompanies a sentence ender like vertex 34. Along with the bottom five being words (trophic values ranging from $0.00-0.86$) nearer the start of sentences such as ``there" and ``times" in relation to the corpus. However trophic incoherence is calculated to be $0.91$ which means that the levels in the graph can not be distinguished and are not clear. The $\text{trophic coherence}$ is then calculated by $(1 - \text{trophic incoherence})$ giving a coherence values of $0.09$. This is due to the fact of the vast difference of sentence lengths in the corpus. The lengths varies from the shortest sentence of five words and the longest of forty seven words. Consequently, a clear partition in the levels may not be provided but there remains a good layout for sentence flow. Demonstrated by further graphs with the trophic levels as the $y$-axis ranging from 0 to 10 downwards to provide a cascade of words. Then the $x$-axis ranging from 0 to 10 from left to right which will be based on other graphical properties.
 
 \begin{table}[!htb]
 \centering
@@ -99,9 +99,10 @@ Now onto the analysis of Trophic levels and coherence (see Tables \ref{table:eng
 	\label{table:englishtablepr}
 \end{subtable}
 \caption{Partial extracts of the English table data ordered by their (a) betweenness centrality values, (b) closeness centrality values, (c) local clustering coefficients and (d) page ranks.}
+\label{table:engav}
 \end{table}
 
-Extraction of the top ten vertices for each graph property to provide ease of comparison later on with the graph visualisations.
+Extraction of the top ten vertices for each graph property along with it's various values are shown in Table \ref{table:engav}. This is to provide ease of comparison later with the graph visualisations if necessary.
 
 \begin{figure}[!htb]
 \centering
@@ -121,13 +122,13 @@ Extraction of the top ten vertices for each graph property to provide ease of co
 \caption{The $x$-axis positioning of vertices are altered based on their (a) betweenness centrality and (b) closeness centrality values. The $y$-axis uses the trophic levels. Since the axis is the same for any graph, due to normalised values, further graphs will not contain the axis for clarity.}
 \end{figure}
 
-As visually demonstrated on Figures \ref{fig:engbc} and \ref{fig:engcc}, the centrality values for each word is plotted against their trophic levels. Both have been normalised to a range of 0-10 with Figure \ref{fig:engbc} showing the betweenness centrality on the x-axis and Figure \ref{fig:engcc} showing the closeness centrality. The axis are provided here to demonstrate the ranges however will not be included for future graphs because they follow the same axis layout.
+The centrality values, local clustering coefficients and page ranks for each word is plotted against their trophic levels. Figure \ref{fig:engbc} shows the betweenness centrality on the x-axis and other graphs will have other properties in place of the betweenness. The axis are provided on the figures to demonstrate the ranges however will not be included for future graphs because they follow the same axis.
 
-Key vertices can be visually identified based on their betweenness values. These vertices are vertex 3, 0 and 75 which are the words ``and", ``a" and ``the" respectively (shown by the Table \ref{table:englishtablebc}). These are conjunctions and determiners of the English language and they have the largest frequency of appearance in the story corpus discussed before. Demonstrating a strong link between the betweenness centrality values of vertices to the word frequencies within the text. Furthermore, these words are common in forming correct structure of a typical English sentence meaning that high betweenness associates the words as key bridges in a sentence. 
+Key vertices can be visually identified based on their betweenness values (see Figure \ref{fig:engbc}). These vertices are vertex 3, 0 and 75 which are the words ``and", ``a" and ``the" respectively. These are conjunctions and determiners of the English language and they have the largest frequency of appearance in the story corpus discussed before. Demonstrating a strong link between the betweenness centrality values of vertices to the word frequencies within the text. Furthermore, these words are common in forming correct structure of a typical English sentence meaning that high betweenness associates the words as key bridges in a sentence. 
 
-When considering closeness centrality, the graph shows that almost all vertices have a similar closeness value in comparison to their betweenness. This is because the closeness centrality analyses the importance of the words within their local clusters rather than the graph as a whole. Meaning that words with high closeness values are key connections in their relative clusters, in other words the sentences that they are part of. However vertex 34 (the word ``great") is an outlier and by further analysis, vertex 34 is the only connection between vertex 0 and 25. Also vertex 25 has the highest trophic level and vertex 0 has a low trophic level but a higher degree. Consequently, the closeness value for 34 is an extreme due to the fact that it is the only predecessor of vertex 25. Thus meaning that vertex 34 is the only local bridge in its sentence giving it an extreme closeness whereas other vertices contains multiple connections.
+When considering closeness centrality, the graph (see Figure \ref{fig:fig:engcc}) shows that almost all vertices have a similar closeness value in comparison to their betweenness. This is because the closeness centrality analyses the importance of the words within their local clusters rather than the graph as a whole. So, words with high closeness values are key connections in their relative clusters. In other words, the sentences that they are part of. However, vertex 34 (``great") is an outlier and by further analysis, vertex 34 is the only connection between vertex 0 and 25. Also vertex 25 has the highest trophic level and vertex 0 has a low trophic level but a higher degree. Consequently, the closeness value for 34 is an extreme due to the fact that it is the only predecessor of vertex 25. Thus meaning that vertex 34 is the only local bridge in its sentence giving it an extreme closeness whereas other vertices contains multiple connections.
 
-In conclusion, based on the story corpus, betweenness finds the words most commonly used as connectors in a sentence and closeness finds the words that are likely to isolate later vertices.
+Based on the story corpus, betweenness finds the words most commonly used as connectors in a sentence and closeness finds the words that are likely to isolate later vertices.
 
 \begin{figure}[!htb]
 \centering
@@ -147,9 +148,9 @@ In conclusion, based on the story corpus, betweenness finds the words most commo
 \caption{Instead of centrality values like before, (a) local clustering coefficients and (b) page ranks are used for the $x$-axis. The $y$ values remains the same representing the trophic levels.}
 \end{figure}
 
-Finally, local clustering coefficients and page ranks of the vertices within the English word graph are presented similarly as before.  Local clustering coefficients in Figure \ref{fig:englc} and page ranks in Figure \ref{fig:engpr} along with their respective table extracts shown before in Tables \ref{table:englishtablelc} and \ref{table:englishtablepr}. 
+Immediately, the local clustering graph (see Figure \ref{fig:englc}) shows very few vertices who has a high local clustering, the main ones being vertices 87 and 90 (``water" and ``when" respectively). However, there does not exist a clear relationship between these words other than neighbours of these words have have a high degree or importance in the graph. Important words such as ``and" and ``a". On the other hand this is only for the English version of the story so other languages may lead to different results. 
 
-Immediately, the local clustering graph shows very few vertices who has a high local clustering, the main ones being vertices 87 and 90 (``water" and ``when" respectively). However, there does not exist a clear relationship between these words other than neighbours of these words have have a high degree or importance in the graph. Important words such as ``and" and ``a". On the other hand this is only for the English version of the story so other languages may lead to different results. The page rank of each vertex shows the importance of each word beyond their direct contact. Essentially it has elements of both closeness and betweenness centrality which the graph reinforces since it is visually similar to the betweenness English graph.
+The page rank (see Figure \ref{fig:engpr}) of each vertex shows the importance of each word beyond their direct contact. Essentially it has elements of both closeness and betweenness centrality which the graph reinforces since it is visually similar to the betweenness English graph.
 
 In conclusion, when analysing the English language, trophic levels have provided a naturally flow of data presentation from top to bottom in the various graphs generated. Where some sections of the graph are grammatically correct when following their flows. Betweenness centrality and page rank both identified the words of most importance with respects to their neighbours. Closeness centrality also identified words of key importance but at a local level. Finally local clustering coefficients do not provide sufficient benefits when visualising the dataset in the English language. Therefore the results generated based on the English version can be extrapolated to represent the English language. Which is achieved through the identification of the words position in the structure of a sentence and its relative importance. This could also be used for languages that have a similar grammatical structure to English. Now we move onto the analysis of a different translation of the story corpus, German.
 
@@ -203,9 +204,9 @@ Table \ref{table:germantop} shows the most common ten words in the German datase
 \caption{Tables for (a) top 10 and (b) bottom 10 trophic levels of the German dataset along with other graph values.}
 \end{table}
 
-Analysis of the trophic levels demonstrates that most words congregate at around $7.3$. This can be more evidently seen in the graphical representations on Figures \ref{fig:gercentrality} and \ref{fig:gerother} later on. From the same graphs, there is a unique path from vertex 31 to 29 which is equivalent to the translation ``Es waren ihrer dreizehn in seinem Reiche, weil er". This path is grammatically correct and represents the beginning of a sentence belonging to the German story corpus. Furthermore this portion holds only unique words, hence has not been influenced by other vertices so demonstrates a clear hierarchical structure. Which is the reason the words used are of low trophic levels. Whereas most other sentences share words which causes the conglomeration nearer $7.3$. Consequently the German language has more options for word choices which means the increased probability of unique sentences.
+Analysis of the trophic levels, extract seen in Tables \label{table:germantoptc} and \label{table:germanbottc}, demonstrates that most words congregate at around $7.3$. There is a unique path from vertex 31 to 29 (can be seen in any German word graph) which is equivalent to the translation ``Es waren ihrer dreizehn in seinem Reiche, weil er". This path is grammatically correct and represents the beginning of a sentence belonging to the German story corpus. Furthermore this portion holds only unique words, hence has not been influenced by other vertices so demonstrates a clear hierarchical structure. Hence the reason these words have low trophic levels. Whereas most other sentences share words which causes the conglomeration nearer $7.3$. Consequently the German language has more options for word choices which means the increased probability of unique sentences.
 
-Trophic coherence has also benefited from the uniqueness of word choices since for the German graph, trophic coherence is calculated to be $0.29$. This is larger than the English graph which was $0.09$. Therefore the German graph has a clearer hierarchical structure compared to the English graph with clearer levels as demonstrated in further graphs below when analysing other properties.
+Trophic coherence has also benefited from the uniqueness of word choices since for the German graph, trophic coherence is calculated to be $0.29$. This is larger than the English graph which was $0.09$. Therefore the German graph has a clearer hierarchical structure compared to the English graph with clearer levels as demonstrated in further graphs below when analysing other properties. We provide Tables \ref{table:germandata} (a)-(d) showing an extract of the top 10 complex values in order of highest to lowest for each property.
 
 \begin{table}[!htb]
 \centering
@@ -240,8 +241,6 @@ Trophic coherence has also benefited from the uniqueness of word choices since f
 \label{table:germandata}
 \end{table}
 
-Entirety of the data presented in table form can be seen in Appendix \ref{app:}. Table \ref{table:germandata} (a)-(d) shows an extract of the top 10 complex values in order of highest to lowest for each property.
-
 \begin{figure}[!htb]
 \centering
 \begin{subfigure}{.45\textwidth}
@@ -261,7 +260,7 @@ Entirety of the data presented in table form can be seen in Appendix \ref{app:}.
 \label{fig:gercentrality}
 \end{figure}
 
-Assessing the visual graphs (Figures \ref{fig:gerbc} and \ref{fig:gercc}), we identify vertex 84 and 26 who have the highest betweenness  values. A correlation to the frequencies of the words in the German Story Corpus can be seen through these vertices. Additionally, the same correlation was also true in the English version because the vertices in both versions referred to the words that are most commonly used as bridges or links in sentences. In the German case, the words are ``ein" and ``und".
+Assessing the visual graph for betweenness (see Figure \ref{fig:gerbc}), we identify vertex 84 and 26 who have the highest betweenness  values. A correlation to the frequencies of the words in the German Story Corpus can be seen through these vertices. Additionally, the same correlation was also true in the English version because the vertices in both versions referred to the words that are most commonly used as bridges or links in sentences. In the German case, the words are ``ein" and ``und".
 
 With closeness centrality, it is a measure of influence on nearby words, the graph in Figure \ref{fig:gercc} shows that the vertices 97, 13, 33, 51 and 41 have the largest closeness values. These all correspond to the second to last word of each sentence apart from the first sentence which has the word ``Kind" as the second to last word. However ``Kind" is also used elsewhere meaning that its closeness value was influenced through other connections. The vertices of high closeness are unique and essential as a bridge in its nearby words. Otherwise the neighbours of these vertices are likely to be isolated. Note that the orange vertices in Figure \ref{fig:gercc} are the unique words predecessors to the vertices of high closeness and the last word of every sentence always has a value of $0$.
 
@@ -287,14 +286,13 @@ Therefore betweenness identifies the words of key importance that are used most 
 \end{figure}
 
 Nothing prominent can be derived by studying the local clustering coefficients (see Figure \ref{fig:gerlc}) because almost all vertices hold a local clustering coefficient of 0 apart from six vertices. Three of which are the vertices 57, 73 and 66 which corresponds to the words ``könig", ``sich" and ``nicht" respectively. These are not unique words in the German story corpus and no other vertices demonstrate anything unique with its local coefficient. 
+
 On the other hand, vertices with a high page rank (see Figure \ref{fig:gerpr}) correlate to either conjunctions, vertex 84 (``und"), or words that accompany other words like pronouns or articles, vertices 26 (``ein"), 27 (``eine"), etc. Therefore high page rank relates to key words that are used frequently in German, which remains true when extended to the German language as a whole.
 
 In conclusion, similar results were seen when analysing the graphical properties based on the German and English translations. With German having a clearer visualisation and stronger correlation compared to the English language due the the uniqueness of inflectional words.
 
 \subsection{French}
-English and German are Germanic languages under the Indo-European family. Instead of another Germanic language, we study a different branch under the Indo-European family. The language being French which lies under the Italic branch of the same family. Similarly to German, French contains the same parts of speech as English but also inflectional words. So words can be inflected by number (singular or plural), gender, person, case, aspect and mood. However whilst German has three genders (Masculine, Feminine and Neutral), French \cite{hawkins2015french} only uses two, masculine and feminine. 
-
-The story corpus is translated into the French version so graphs can be generated off this. Where the initial word graphs are shown in Figure \ref{fig:fregraph}. 
+English and German are Germanic languages under the Indo-European family. Instead of another Germanic language, we study a different branch under the Indo-European family. The language being French which lies under the Italic branch of the same family. Similarly to German, French contains the same parts of speech as English but also inflectional words. So words can be inflected by number (singular or plural), gender, person, case, aspect and mood. However whilst German has three genders (Masculine, Feminine and Neutral), French \cite{hawkins2015french} only uses two, masculine and feminine. With this in consideration, the story corpus is translated into the French version with the initial word graphs seen in Figure \ref{fig:fregraph}. 
 
 \begin{figure}[!htb]
 \centering
@@ -340,7 +338,7 @@ Words of highest frequency are shown in the extract Table \ref{table:frenchtop} 
 \caption{Trophic levels, (a) top 10 and (b) bottom 10 in table format including other values.}
 \end{table}
 
-In relation to the story corpus, French has a high trophic coherence which is calculated to be $0.36$ which is higher than both English and German. Even though it may not be close to $1$, in comparison to previous languages, a clearer level structure can be identified for the French language. Top 10 trophic levels can be seen in Table \ref{table:frenchtoptc} where the high values represent the words nearer to the end of a sentence. All top 10 are within the last four words of sentences in the story corpus. However the predecessors of the words have an impact on their trophic level. If the predecessors of a word is involved in other sentences at a earlier stage then the predecessors trophic value will be lowered. Subsequently lowering the trophic levels of the neighbourhood of the word. This can be seen by vertex 49 who has a trophic level of $5.08$ even though it is last in its sentence.
+In relation to the story corpus, French has a high trophic coherence which is calculated to be $0.36$ which is higher than both English and German. Even though it may not be close to $1$, a clearer level structure can be identified for the French language compared to previous languages. Top 10 trophic levels can be seen in Table \ref{table:frenchtoptc} where all top 10 are within the last four words of sentences in the story corpus. If the predecessor of a word is involved in other sentences at a earlier stage then the predecessor's trophic value will be lowered. Subsequently lowering the trophic levels of the neighbourhood of the word. This can be seen by vertex 49 who has a trophic level of $5.08$ even though it is last in its sentence. The bottom 10 trophic levels is seen in Table \ref{table:frenchtoptc} where a similar idea holds but at the start of sentences instead. Additionally, Tables \ref{table:frenchdata} (a)-(d) shows an top 10 extract of Table \ref{app:} in the order of their corresponding graph property value.
 
 \begin{table}[!htb]
 \centering
@@ -374,8 +372,6 @@ In relation to the story corpus, French has a high trophic coherence which is ca
 \label{table:frenchdata}
 \end{table}
 
-Tables \ref{table:frenchdata} (a)-(d) shows an top 10 extract of Table \ref{app:} in the order of their corresponding graph property value.
-
 \begin{figure}[!htb]
 \centering
 \begin{subfigure}{.45\textwidth}
@@ -395,9 +391,9 @@ Tables \ref{table:frenchdata} (a)-(d) shows an top 10 extract of Table \ref{app:
 \label{fig:frcentrality}
 \end{figure}
 
-Vertices with high betweenness will have many other vertices that must connect to it in order to reach other vertices within their sentence. As mentioned in previous language analysis, betweenness helps identify the key bridges in the sentences by finding the vertices which control the majority of the flow of data. Furthermore the betweenness coincides with the frequency. On the other hand there are vertices such as vertex 78 (``roi") and vertex 38 (``fois") who have a betweenness value of $6.73$ and $5.54$ (see Table \ref{table:frenchtablebc})respectively but only a count of 2 and 1. By further analysis, the reason they have high betweenness, is that they are used with a predecessor and successor of higher betweenness value, i.e. ``un roi et" and ``une fois un". Consequently causing its own betweenness value to be inflated because "un", "et" and "une" must pass through ``roi" or ``fois" to complete their word pathing. Therefore, if vertices have a low count but are connected to other vertices of high betweenness, then their values will relatively increased.
+As mentioned in previous language analysis, betweenness helps identify the key bridges in the sentences by finding the vertices which control the majority of the flow of data. Additionally, the betweenness coincides with the frequency. There are vertices such as vertex 78 (``roi") and vertex 38 (``fois") who have a betweenness value of $6.73$ and $5.54$ (see Figure \ref{fig:frbc}) respectively but only a count of 2 and 1. By further analysis, the reason they have high betweenness, is that they are used with a predecessor and successor of higher betweenness value, i.e. ``un roi et" and ``une fois un". Consequently causing its own betweenness value to be inflated because ``un", ``et" and ``une" must pass through ``roi" or ``fois" to complete their word paths. Therefore, if vertices have a low count but are connected to other vertices of high betweenness, then their values will relatively increased.
 
-As discovered in the German analysis, closeness centrality identifies the vertices most likely divide the graph from their directed path, i.e. the words most likely to isolate the remaining sentence. Otherwise vertices are involved in a diverse range of sentences causing a high degree where the formation of vertex conglomerates can be seen (see Figure \ref{fig:frcc} where a clustering of vertices is shown in the upper left quadrant). Studying the graph in Figure \ref{fig:frcc}, French words have more vertices with a variety of high closeness values. The graph shows clearly that vertices of high closeness would cause isolation for further vertices along its path. According to the visualisations, French is the most unique language out of the three languages seen so far as there is a higher number of clear divisions in the closeness values.
+As discovered in the German analysis, closeness centrality identifies the vertices most likely divide the graph from their directed path, i.e. the words most likely to isolate the remaining sentence. Otherwise vertices are involved in a diverse range of sentences causing a high degree where the formation of vertex conglomerates can be seen (see Figure \ref{fig:frcc} with a clustering of vertices is shown in the upper left quadrant). The French closeness graph shows that French words have more vertices with a variety of high closeness values. The closeness graph shows clearly that vertices of high closeness would cause isolation for further vertices along its path. According to the visualisations, French is the most unique language out of the three languages seen so far as there is a higher number of clear divisions in the closeness values.
 
 \begin{figure}[!htb]
 \centering
@@ -418,9 +414,9 @@ As discovered in the German analysis, closeness centrality identifies the vertic
 \label{fig:frother}
 \end{figure}
 
-Finally the local clustering coefficients and page rank. Only two vertices have a local clustering coefficient of $10$ which are vertex 53 ``le" and vertex 76 ``reine" (see Figure \ref{fig:frlc} and Table \ref{table:frenchtablelc}). In the context of French, nothing particular can be derived. However when studying the graphs of local clustering in various languages, the vertices with a local clustering value are never an start or end to a branch.
+Only two vertices have a local clustering coefficient of $10$ which are vertex 53 ``le" and vertex 76 ``reine" (see Figure \ref{fig:frlc}). In the context of French, nothing particular can be derived. However when considering local clustering in previous languages and French, a correlation we find is that the vertices with a local clustering value are never the start or end to a branch.
 
-Page ranks for the French story corpus measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 ``il" has a low page rank value of $1.26$ as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be influential.
+Page ranks (see Figure \ref{fig:frpr}) for the French story corpus measures the influence the vertices have on one another other than for their immediate neighbours. This is why vertex 46 ``il" has a low page rank value of $1.26$ as it is located at the start of the sentence so does not have enough unique vertices encompassing it to be influential.
 
 In conclusion, French has similar results in comparison to English and German which makes sense as they are a part of the same language family. So to see a different perspective, the study of other language families are undertaken such as the Japonic language family.
 
@@ -429,11 +425,11 @@ The Japonic language family is the protolanguage for Japanese and Ryūkyūan lan
 \subsection{Japanese}
 To give a larger variety of languages, Japanese is studied as it uses vastly different grammar compared to the languages seen so far. Japanese has only five linguistic word classes which includes nouns, verbal nouns, nominal adjectives, verbs and adjectives. The order in which the words are structured is different to Indo-European languages since Japanese uses SOV (Subject-Object-Verb) compared to languages like German and English which uses SVO (Subject-Verb-Object). Furthermore Japanese does not rely heavily on grammatical number or gender and is more focused on their system of honorifics which indicates the speaker, listener or person of reference. Therefore, even if Japanese contains words borrowed from other languages (these are referred to as \emph{loanwords} \cite{miura1979influence}), their grammar is vastly different. 
 
-We follow the same process as before and input the Japanese Story corpus into my program to produce the basic graphs. For simplicity, we show the numbered version of the word graph (see Figure \ref{fig:jpgraph}) with the words they correspond to in the full table of data (See Table \ref{app:}).
+We follow the same process as before and input the Japanese story corpus into my program to produce the basic graphs. For simplicity, we show the numbered version of the word graph (see Figure \ref{fig:jpgraph}) with the words they correspond to in the full table of data located in Appendix \ref{app:}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.2]{japanesewordgraph.png}
+\includegraphics[scale=0.3]{japanesewordgraph.png}
 \caption{The Japanese word graph generated from the Japanese translation of the story corpus.}
 \label{fig:jpgraph}
 \end{figure}
@@ -467,7 +463,7 @@ Out of the previous languages, the larger frequency of a words appearance was 9.
 
 Due to the graph having an increased amount of bidirectional edges such as the edge between vertex 25 and 5. As well as an increased amount of self loops, the trophic incoherence is very high in comparison to previous languages. Thus, the trophic coherence for the Japanese extract is only $0.04$. Caused by the ambiguity of hierarchical structure with bidirectional edges and self loops. An example of a self loop is vertex 0 which is part of the word ``everyday". The subsequent repetition of a word that creates a different meaning is known as \emph{reduplication}.
 
-Unfortunately without a full understanding of the Japanese language, direct analysis of each word is difficult. This is because of the multitude of meanings each word has depending on the context. Therefore, the trophic levels can only provide a generic flow of text from lowest trophic levels (see Table \ref{table:japanesebottc}) as sentence starters to highest levels (see Table \ref{table:japanesetoptc})  as sentence enders.
+Unfortunately without a full understanding of the Japanese language, direct analysis of each word is difficult. This is because of the multitude of meanings each word has depending on the context. Therefore, the trophic levels can only provide a generic flow of text from lowest trophic levels (see Table \ref{table:japanesebottc}) as sentence starters to highest levels (see Table \ref{table:japanesetoptc})  as sentence enders. As with previous languages, Tables \ref{table:japanesedatar} (a)-(d) are ordered extracts from the main Japanese data table.
 
 \begin{table}[!htb]
 \centering
@@ -502,8 +498,6 @@ Unfortunately without a full understanding of the Japanese language, direct anal
 \label{table:japanesedatar}
 \end{table}
 
-As with previous languages, Tables \ref{table:japanesedatar} (a)-(d) are ordered extracts from the main table in Appendix \ref{app:}.
-
 \begin{figure}[!htb]
 \centering
 \begin{subfigure}{.45\textwidth}
@@ -523,11 +517,9 @@ As with previous languages, Tables \ref{table:japanesedatar} (a)-(d) are ordered
 \label{fig:jpcentrality}
 \end{figure}
 
-The graphs in the centrality Figure \ref{fig:jpcentrality} shows that the words are more evenly distributed unlike the Indo-European languages. Which correlates to the importance of the Japanese characters nature of being reliant on one another for their meaning and demonstrates the complexities of the language visually. The basic correlations from other languages still hold here. Although further detail cannot be determined by the visualisation other than importance.
+The graphs for centrality seen in Figure \ref{fig:jpcentrality} illustrates that the words are more evenly distributed unlike the Indo-European languages. This correlates to the importance of the Japanese characters nature of being reliant on one another for their meaning and demonstrates the complexities of the language visually. The basic correlations from other languages still hold here. Although further detail cannot be determined by the visualisation other than importance. 
 
-Japanese's closeness centrality values also has a larger average compared to the Indo-European languages. Instead of looking at the vertices in relation to the whole graph, closeness focusses on the closer clusters. Hence provides a similar shape betweenness but shifted right to emphasise the zooming in on the vertices. There are no vertices that stand out so no correlations can be easily derived.
-
-Therefore only a general correlation can be demonstrated through the centrality graphs. Clearer results can be gathered with Japanese fluency.
+Japanese's closeness centrality values also has a larger average compared to the Indo-European languages. Instead of looking at the vertices in relation to the whole graph, closeness focusses on the closer clusters. Hence provides a similar shape betweenness but shifted right to emphasise the zooming in on the vertices. There are no vertices that stand out so no correlations can be easily derived. Therefore only a general correlation can be demonstrated through the centrality graphs. Clearer results can be gathered with Japanese fluency.
 
 \begin{figure}[!htb]
 \centering
@@ -562,11 +554,11 @@ The main branches of Chinese are Mandarin or Cantonese with Mandarin considered 
 
 Similarly to Japanese, Chinese has very few inflectional characters and utilises other particles to accompany the syllables so various verbal aspects can be expressed. Another similarity is the use of reduplication where a syllable is repeated to give a different meaning. Parts of speech for Chinese is split into two major categories, the \emph{function} words and the \emph{content} words. The function words contains nouns, pronouns, verbs, auxiliary verbs, adjectives, number words, measure words, interjections and onomatopoeias. Function words contain conjunctions, prepositions and particles. Furthermore, each subgroup mentioned can have further branches dependent on the context that they are used in. For example, nouns can be proper nouns, location nouns, place nouns and time nouns in the Chinese language.
 
-Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also syllables have a reliability factor and depends on the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with seeing the basic word graph generated for the Chinese translation of the story corpus, seen in Figure \ref{cngraph} (shown with integer labelling to reference each word of the entire table, Table ?? in the Appendix).
+Therefore Chinese contains a larger amount of unique syllables compared to the words in the English language. Also syllables have a reliability factor and depends on the context of use (like when studying Japanese). Keeping this in mind, we generate and analyse the graphs beginning with seeing the basic word graph generated for the Chinese translation of the story corpus, seen in Figure \ref{fig:cngraph} (shown with integer labelling).
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.2]{chinesewordgraph.png}
+\includegraphics[scale=0.3]{chinesewordgraph.png}
 \caption{The Chinese word graph generated from the Chinese translation of the story corpus.}
 \label{fig:cngraph}
 \end{figure}
@@ -598,7 +590,7 @@ The syllables with the highest count (see Table \ref{table:chinesetop}) is verte
 \caption{Tables to show the (a) top 10 trophic level and (b) the bottom 10 along with other relative data.}
 \end{table}
 
-An increased amount of reduplications and bidirectional edges appear in the Chinese graph. Like before with the Japanese data, trophic levels do not demonstrate a clear visual hierarchy. Meaning that the trophic coherence is low and is calculated to be $0.09$ based on the Chinese translation of the story corpus. Therefore average positions of each syllable within a sentence can still be represented but with minor flexibility. The trophic levels go from low to high in relation to the sentence flow with Table \ref{table:chinesetoptc} showing the top 10 syllables nearer the start of a sentence and Table \ref{table:chinesebottc} showing the top 10 syllables for the end. Grammatically correct can be seen by unique downward paths in the graph visualisations such as the path from vertex 19 to vertex 61 (see Figure \ref{fig:cncentrality} or \ref{fig:cnother}).
+An increased amount of reduplications and bidirectional edges appear in the Chinese graph. Like before with the Japanese data, trophic levels do not demonstrate a clear visual hierarchy. Meaning that the trophic coherence is low and is calculated to be $0.09$ based on the Chinese translation of the story corpus. Therefore average positions of each syllable within a sentence can still be represented but with flexibility. The trophic levels go from low to high in relation to the sentence flow with Table \ref{table:chinesetoptc} showing the top 10 syllables nearer the start of a sentence and Table \ref{table:chinesebottc} showing the top 10 syllables for the end. Grammatically correct sentences can be seen by unique downward paths in the graph visualisations such as the path from vertex 19 to vertex 61 (see Figure \ref{fig:cncentrality} or \ref{fig:cnother}). For clarity, the top 10 syllables for each complex graph property is seen by Tables \ref{table:cnav} (a)-(d).
 
 \begin{table}[!htb]
 \centering
@@ -630,9 +622,8 @@ An increased amount of reduplications and bidirectional edges appear in the Chin
 	\label{table:chinesetablepr}
 \end{subtable}
 \caption{Partial extracts of the Chinese table data ordered by their (a) betweenness centrality values, (b) closeness centrality values, (c) local clustering coefficients and (d) page ranks.}
+\label{table:cnav}
 \end{table}
-
-The top 10 syllables for each complex graph property is seen here where the full table is in Appendix \ref{app:}.
 
 \begin{figure}[!htb]
 \centering
@@ -655,7 +646,7 @@ The top 10 syllables for each complex graph property is seen here where the full
 
 Betweenness centrality in the Chinese translation Story corpus (see figure \ref{fig:cnbc}) identified the syllables vertex 90 and vertex 10 (both are particles) to be of high importance. Re-emphasizing the fact that they are the syllables that act most like bridges and needed to derive further meaning. Hence betweenness relate closely to the counts of the syllables discussed earlier. The same correlation is achieved in previously discussed languages so we can conclude that this correlation of importance holds for the majority of languages.
 
-As mentioned in the German analysis, closeness measures the importance of words directly around them. In other words, the vertices vital in the paths structure (controlling the flow of data). Therefore, demonstrated by Figure \ref{fig:cncentrality}, vertex 98 has the highest closeness as without this vertex, vertex 61 is isolated. Subsequently the predecessors of vertex 98 have higher closeness. However there are no other vertices with high closeness since other syllables hold connections to various unique vertices. Thus inferring that these syllables of high degree have multiple meanings rather than the unique meaning of vertex 98s section of the path.
+As mentioned in the German analysis, closeness measures the importance of words directly around them. In other words, the vertices vital in the paths structure (controlling the flow of data). Therefore, illustrated by Figure \ref{fig:cncc}, vertex 98 has the highest closeness as without this vertex, vertex 61 is isolated. Subsequently the predecessors of vertex 98 have higher closeness. However there are no other vertices with high closeness since other syllables hold connections to various unique vertices. Thus inferring that these syllables of high degree have multiple meanings rather than the unique meaning of vertex 98s section of the path.
 
 \begin{figure}[!htb]
 \centering
